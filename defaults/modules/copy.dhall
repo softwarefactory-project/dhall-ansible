@@ -1,1 +1,1 @@
-{ content = None Text}
+{ content = None Text }

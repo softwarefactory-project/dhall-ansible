@@ -5,4 +5,5 @@
 , command = None Text
 , copy = None ../types/modules/copy.dhall
 , debug = None ../types/modules/debug.dhall
+, pause = None ../types/modules/pause.dhall
 }

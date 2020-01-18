@@ -1,7 +1,10 @@
-all: update test
+all: update lint test
 
 test:
-	@(dhall-to-yaml --omitEmpty --explain --file examples/demo.dhall)
+	@dhall-to-yaml --omit-empty --explain --file examples/demo.dhall
 
 update:
-	@(python3 scripts/update.py)
+	@python3 scripts/update.py
+
+lint:
+	@bash -c 'for f in $$(find . -name "*.dhall"); do dhall format --ascii < $$f > $$f.fmt; mv $$f.fmt $$f; done'

@@ -5,4 +5,5 @@
 , command : Optional Text
 , copy : Optional ./modules/copy.dhall
 , debug : Optional ./modules/debug.dhall
+, pause : Optional ./modules/pause.dhall
 }

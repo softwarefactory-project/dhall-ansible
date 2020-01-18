@@ -35,6 +35,13 @@ def type(type: Path) -> None:
     depth = len(type_name.split('/'))
     root = "../" * depth
 
+    if type_name == 'task.dhall':
+        task_lines = list(filter(lambda x: 'Optional ./modules/' not in x, type.read_text().split('\n')[:-2]))
+        for module in sorted(os.listdir('types/modules')):
+            task_lines.append(', %s : Optional ./modules/%s' % (module.replace('.dhall', ''), module))
+        task_lines.append('}')
+        type.write_text('\n'.join(task_lines) + '\n')
+
     schema = "Type = {root}/types/{name}, default = {root}/defaults/{name}".format(
         root=root[:-1], name=type_name)
     write(Path('schemas') / type_name, "{ " + schema + " }")
