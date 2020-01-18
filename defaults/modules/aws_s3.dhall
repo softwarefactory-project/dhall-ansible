@@ -1,0 +1,21 @@
+{ prefix = None (List Text)
+, marker = None (List Text)
+, ignore_nonexistent_bucket = None Text
+, overwrite = None Text
+, aws_secret_key = None Text
+, encrypt = None Bool
+, rgw = None Bool
+, retries = None Natural
+, max_keys = None (List Natural)
+, version = None Text
+, s3_url = None Text
+, permission = None (List Text)
+, dest = None Text
+, object = None Text
+, src = None Text
+, aws_access_key = None Text
+, region = None Text
+, headers = None Text
+, expiration = None Natural
+, metadata = None Text
+}

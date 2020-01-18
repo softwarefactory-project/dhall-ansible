@@ -1,1 +1,1 @@
-{ msg = None Text, var = None Text }
+{ msg = None Text, var = None Text, verbosity = None Natural }

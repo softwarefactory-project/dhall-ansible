@@ -1,1 +1,5 @@
-{ minutes = None Natural, seconds = None Natural, prompt = None Text }
+{ seconds = None Text
+, prompt = None Text
+, minutes = None Text
+, echo = None Text
+}

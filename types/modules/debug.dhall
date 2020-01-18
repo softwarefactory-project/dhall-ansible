@@ -1,1 +1,1 @@
-{ msg : Optional Text, var : Optional Text }
+{ msg : Optional Text, var : Optional Text, verbosity : Optional Natural }

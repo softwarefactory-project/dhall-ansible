@@ -1,0 +1,25 @@
+{ partial = None Text
+, links = None Text
+, copy_links = None Text
+, perms = None Text
+, link_dest = None Text
+, owner = None Text
+, archive = None Text
+, dest_port = None Text
+, group = None Text
+, existing_only = None Text
+, rsync_path = None Text
+, verify_host = None Text
+, use_ssh_args = None Text
+, dirs = None Text
+, private_key = None Text
+, compress = None Text
+, rsync_timeout = None Natural
+, rsync_opts = None Text
+, set_remote_user = None Bool
+, recursive = None Text
+, checksum = None Text
+, times = None Text
+, mode = None Text
+, delete = None Text
+}

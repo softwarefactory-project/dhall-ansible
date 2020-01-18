@@ -34,7 +34,6 @@ def type(type: Path) -> None:
     type_name = str(type).replace('types/', '')
     depth = len(type_name.split('/'))
     root = "../" * depth
-
     if type_name == 'task.dhall':
         task_lines = list(filter(lambda x: 'Optional ./modules/' not in x, type.read_text().split('\n')[:-2]))
         for module in sorted(os.listdir('types/modules')):
@@ -57,7 +56,7 @@ def type(type: Path) -> None:
     def read_type(s: str) -> List[str]:
         return list(map(str.strip, s.split(':')))
 
-    type_def = type.read_text()[1:-2].split(',')
+    type_def = type.read_text()[1:-1].strip('{').strip('}').split(',')
     defaults = list(map(
         mk_optional, filter(is_optional, map(read_type, type_def))))
     if not defaults:
@@ -70,7 +69,7 @@ def type(type: Path) -> None:
 
 def package(types: List[Path]) -> None:
     packages = list(map(lambda type: "%s = ./%s" % (
-        type.name.replace('.dhall', '').capitalize(),
+        ''.join(map(str.capitalize, type.name.replace('.dhall', '').split('_'))),
         str(type).replace('types/', 'schemas/')), types))
     write(Path('package.dhall'), "{ %s\n}" % "\n, ".join(packages))
 

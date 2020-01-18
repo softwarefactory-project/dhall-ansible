@@ -1,4 +1,5 @@
-{ minutes : Optional Natural
-, seconds : Optional Natural
+{ seconds : Optional Text
 , prompt : Optional Text
+, minutes : Optional Text
+, echo : Optional Text
 }

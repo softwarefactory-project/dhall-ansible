@@ -1,0 +1,19 @@
+{ depth = None Text
+, executable = None Text
+, refspec = None Text
+, force = None Text
+, track_submodules = None Text
+, reference = None Text
+, verify_commit = None Text
+, clone = None Text
+, accept_hostkey = None Text
+, update = None Text
+, ssh_opts = None Text
+, umask = None Text
+, version = None Text
+, bare = None Text
+, remote = None Text
+, key_file = None Text
+, archive = None Text
+, recursive = None Text
+}
