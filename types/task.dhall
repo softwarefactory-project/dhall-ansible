@@ -45,6 +45,15 @@
 , iptables : Optional ./modules/iptables.dhall
 , lineinfile : Optional ./modules/lineinfile.dhall
 , mount : Optional ./modules/mount.dhall
+, os_keypair : Optional ./modules/os_keypair.dhall
+, os_network : Optional ./modules/os_network.dhall
+, os_router : Optional ./modules/os_router.dhall
+, os_security_group : Optional ./modules/os_security_group.dhall
+, os_security_group_rule : Optional ./modules/os_security_group_rule.dhall
+, os_server : Optional ./modules/os_server.dhall
+, os_server_volume : Optional ./modules/os_server_volume.dhall
+, os_subnet : Optional ./modules/os_subnet.dhall
+, os_volume : Optional ./modules/os_volume.dhall
 , package : Optional ./modules/package.dhall
 , pause : Optional ./modules/pause.dhall
 , ping : Optional ./modules/ping.dhall

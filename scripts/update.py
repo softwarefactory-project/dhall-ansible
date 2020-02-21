@@ -68,9 +68,9 @@ def type(type: Path) -> None:
 
 
 def package(types: List[Path]) -> None:
-    packages = list(map(lambda type: "%s = ./%s" % (
+    packages = list(sorted(map(lambda type: "%s = ./%s" % (
         ''.join(map(str.capitalize, type.name.replace('.dhall', '').split('_'))),
-        str(type).replace('types/', 'schemas/')), types))
+        str(type).replace('types/', 'schemas/')), types)))
     write(Path('package.dhall'), "{ %s\n}" % "\n, ".join(packages))
 
 

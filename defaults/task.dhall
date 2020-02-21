@@ -45,6 +45,15 @@
 , iptables = None ../types/modules/iptables.dhall
 , lineinfile = None ../types/modules/lineinfile.dhall
 , mount = None ../types/modules/mount.dhall
+, os_keypair = None ../types/modules/os_keypair.dhall
+, os_network = None ../types/modules/os_network.dhall
+, os_router = None ../types/modules/os_router.dhall
+, os_security_group = None ../types/modules/os_security_group.dhall
+, os_security_group_rule = None ../types/modules/os_security_group_rule.dhall
+, os_server = None ../types/modules/os_server.dhall
+, os_server_volume = None ../types/modules/os_server_volume.dhall
+, os_subnet = None ../types/modules/os_subnet.dhall
+, os_volume = None ../types/modules/os_volume.dhall
 , package = None ../types/modules/package.dhall
 , pause = None ../types/modules/pause.dhall
 , ping = None ../types/modules/ping.dhall
