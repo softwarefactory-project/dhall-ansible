@@ -3,6 +3,7 @@
 , failed_when : Optional Text
 , changed_when : Optional Text
 , command : Optional Text
+, args : Optional ./args.dhall
 , acl : Optional ./modules/acl.dhall
 , add_host : Optional ./modules/add_host.dhall
 , apt : Optional ./modules/apt.dhall

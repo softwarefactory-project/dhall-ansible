@@ -3,6 +3,7 @@
 , failed_when = None Text
 , changed_when = None Text
 , command = None Text
+, args = None ../types/args.dhall
 , acl = None ../types/modules/acl.dhall
 , add_host = None ../types/modules/add_host.dhall
 , apt = None ../types/modules/apt.dhall

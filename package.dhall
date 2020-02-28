@@ -8,6 +8,8 @@
     ./schemas/modules/apt_key.dhall sha256:b4ef35ae4ac6ca9bf78fa7a7de15e972bfd32fb8ccd993334611ac4a4776585e
 , AptRepository =
     ./schemas/modules/apt_repository.dhall sha256:e3beeb4b0c3c573a56877d329ab722f5d41765903cbd0de9dbc76bf860a9c0d4
+, Args =
+    ./schemas/args.dhall sha256:a91fa3a1cb42c8b36bf36d6c0a162b06143b7598d428eb20946316f58e38a3dd
 , Assemble =
     ./schemas/modules/assemble.dhall sha256:7a9f0e5f97cd4228d99ee299eb08f34567214c62b0bdc41e22fa5bf9adebe12e
 , Assert =
@@ -109,7 +111,7 @@
 , Pip =
     ./schemas/modules/pip.dhall sha256:60c2aae350c1855ac6a963b8b0421de26d7ca6c1270eeaf57fd9254d412d03fe
 , Play =
-    ./schemas/play.dhall sha256:dad3419625878dc2975062e60f808b9a89cc8ced22d0002b18783d1664091088
+    ./schemas/play.dhall sha256:d99b5a6e01defb2a440639a01856e3bc736e3d67c2c9f59b5291ca1481afb840
 , RpmKey =
     ./schemas/modules/rpm_key.dhall sha256:4c8dc8a7e92f0a2a43376b6bcf07dd4b72da56eaa29bd0a6e533c3441aa42240
 , S3Bucket =
@@ -139,7 +141,7 @@
 , Systemd =
     ./schemas/modules/systemd.dhall sha256:d0b146f8e81d043dca7e413bde5549c6a60a28283db710470d2beed6f913d050
 , Task =
-    ./schemas/task.dhall sha256:8354f22b18eac636b9b8f21322b7dc59dcaef5c7d370ff301f1d55a306cd7fa0
+    ./schemas/task.dhall sha256:a0415fb71327b597bfc28fc86141f5ffe10be1635546f763a28b860a9a25251f
 , Template =
     ./schemas/modules/template.dhall sha256:38ce97245bfdb4733bbbf2c55ba77c57abad462547bac94a5c2a78c41befd350
 , Unarchive =
