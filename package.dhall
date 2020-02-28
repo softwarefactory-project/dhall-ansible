@@ -27,7 +27,7 @@
 , Cloudformation =
     ./schemas/modules/cloudformation.dhall sha256:d246678186b2d60a450429f8745067ac99701318ba4fc9792975c291c5b68922
 , Copy =
-    ./schemas/modules/copy.dhall sha256:3345ab008e9022c937e2dbb30c3d0fbb2e86b3206c1773ea6e11cc08c251d254
+    ./schemas/modules/copy.dhall sha256:8101e85c903e8d200c59e1d0e00a50bfc2f933d0962fa3058a2e7275b96fdf90
 , Debconf =
     ./schemas/modules/debconf.dhall sha256:6435658ac1d3b05a62014aeeb00d2724ec104f88e20cf5b8c66fbc8dc4da08df
 , Debug =
@@ -51,7 +51,7 @@
 , Fetch =
     ./schemas/modules/fetch.dhall sha256:942c59c20d64c463d9fd95edbdd1739243da3327ca3295ea2909f9db8461fccc
 , File =
-    ./schemas/modules/file.dhall sha256:800d6db9b1fef17b3f1217d6f2fec9aff98e57c9a971f5a18a804f754018298a
+    ./schemas/modules/file.dhall sha256:13629ea6a60a7fcd76f7ba1fa4a609c6f127b26898f526315e7777ca89d03bfc
 , Find =
     ./schemas/modules/find.dhall sha256:2df43ccfb71278d423515b4409100017a58ceca21524bddb69e173b08df5d1f6
 , GetUrl =
@@ -111,7 +111,7 @@
 , Pip =
     ./schemas/modules/pip.dhall sha256:60c2aae350c1855ac6a963b8b0421de26d7ca6c1270eeaf57fd9254d412d03fe
 , Play =
-    ./schemas/play.dhall sha256:d99b5a6e01defb2a440639a01856e3bc736e3d67c2c9f59b5291ca1481afb840
+    ./schemas/play.dhall sha256:4664b4d57ebbe99321a891e5bc39261018091f3e871f2092c0e514253b32a019
 , RpmKey =
     ./schemas/modules/rpm_key.dhall sha256:4c8dc8a7e92f0a2a43376b6bcf07dd4b72da56eaa29bd0a6e533c3441aa42240
 , S3Bucket =
@@ -141,7 +141,7 @@
 , Systemd =
     ./schemas/modules/systemd.dhall sha256:d0b146f8e81d043dca7e413bde5549c6a60a28283db710470d2beed6f913d050
 , Task =
-    ./schemas/task.dhall sha256:a0415fb71327b597bfc28fc86141f5ffe10be1635546f763a28b860a9a25251f
+    ./schemas/task.dhall sha256:66dc6a181be49eee470bc00f23498a7211e5733a142eba6b24b8823ba1e1aec3
 , Template =
     ./schemas/modules/template.dhall sha256:38ce97245bfdb4733bbbf2c55ba77c57abad462547bac94a5c2a78c41befd350
 , Unarchive =

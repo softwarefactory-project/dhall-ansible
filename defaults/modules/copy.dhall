@@ -6,4 +6,5 @@
 , follow = None Text
 , backup = None Text
 , local_follow = None Text
+, mode = None Text
 }

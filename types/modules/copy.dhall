@@ -7,4 +7,5 @@
 , follow : Optional Text
 , backup : Optional Text
 , local_follow : Optional Text
+, mode : Optional Text
 }

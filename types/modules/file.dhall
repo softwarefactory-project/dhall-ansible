@@ -4,4 +4,5 @@
 , state : Optional Text
 , path : Text
 , follow : Optional Text
+, mode : Optional Text
 }
