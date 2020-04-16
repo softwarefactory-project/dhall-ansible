@@ -3,6 +3,7 @@ let Ansible =
 
 in  [ Ansible.Play::{
       , hosts = "localhost"
+      , vars = Some (toMap { var_name = "var_value" })
       , tasks = Some
         [ Ansible.Task::{
           , debug = Some Ansible.Debug::{ msg = Some "Hello world" }

@@ -1,5 +1,5 @@
-{- Created from https://github.com/ansible/ansible/blob/ac509d489bdfb23dcf5cd1694473abb7cb0cf4aa/lib/ansible/playbook/play.py#L43 -}
 { hosts : Text
+, vars : Optional ./map_text.dhall
 , gather_facts : Optional Bool
 , gather_subset : Optional (List Text)
 , gather_timeout : Optional Natural

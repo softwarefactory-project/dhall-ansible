@@ -1,4 +1,5 @@
-{ gather_facts = None Bool
+{ vars = None ../types/map_text.dhall
+, gather_facts = None Bool
 , gather_subset = None (List Text)
 , gather_timeout = None Natural
 , fact_path = None Text

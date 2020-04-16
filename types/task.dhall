@@ -1,4 +1,5 @@
 { name : Optional Text
+, vars : Optional ./map_text.dhall
 , loop : Optional Text
 , loop_control : Optional ./loop_control.dhall
 , action : Optional Text

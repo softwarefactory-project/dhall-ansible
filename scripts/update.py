@@ -76,7 +76,7 @@ def package(types: List[Path]) -> None:
 
 all_files: List[Path] = []
 for dir, _, files in os.walk('types/'):
-    for file in files:
+    for file in filter(lambda f: f != "map_text.dhall", files):
         file_path = Path(dir) / file
         type(file_path)
         all_files.append(file_path)

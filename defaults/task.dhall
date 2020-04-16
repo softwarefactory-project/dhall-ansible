@@ -1,4 +1,5 @@
 { name = None Text
+, vars = None ../types/map_text.dhall
 , loop = None Text
 , loop_control = None ../types/loop_control.dhall
 , action = None Text

@@ -26,6 +26,7 @@ let Ansible =
 
 in  [ Ansible.Play::{
       , hosts = "localhost"
+      , vars = Some (toMap { var_name = "var_value" })
       , tasks = Some
         [ Ansible.Task::{
           , debug = Some Ansible.Debug::{ msg = Some "Hello world" }
@@ -53,6 +54,8 @@ in  [ Ansible.Play::{
       package:
         name: emacs-nox
         state: present
+  vars:
+    var_name: var_value
 
 ```
 
