@@ -1,11 +1,10 @@
-{ src : Optional Text
-, directory_mode : Optional Text
-, force : Optional Text
-, remote_src : Optional Text
-, dest : Text
+{ backup : Optional Text
 , content : Optional Text
+, dest : Text
+, directory_mode : Optional Text
 , follow : Optional Text
-, backup : Optional Text
+, force : Optional Text
 , local_follow : Optional Text
-, mode : Optional Text
+, remote_src : Optional Text
+, src : Optional Text
 }

@@ -1,10 +1,10 @@
-{ insertbefore = None Text
-, create = None Text
-, backrefs = None Text
-, state = None Text
-, others = None Text
-, insertafter = None Text
-, regexp = None Text
+{ backrefs = None Text
 , backup = None Text
+, create = None Text
+, insertafter = None Text
+, insertbefore = None Text
 , line = None Text
+, others = None Text
+, regexp = None Text
+, state = None Text
 }

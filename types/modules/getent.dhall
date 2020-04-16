@@ -1,5 +1,5 @@
-{ fail_key : Optional Text
-, split : Optional (List Text)
+{ database : Text
+, fail_key : Optional Text
 , key : Optional Text
-, database : Text
+, split : Optional (List Text)
 }

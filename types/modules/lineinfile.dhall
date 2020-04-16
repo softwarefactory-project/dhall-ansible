@@ -1,11 +1,11 @@
-{ insertbefore : Optional Text
-, create : Optional Text
-, backrefs : Optional Text
-, state : Optional Text
-, others : Optional Text
-, insertafter : Optional Text
-, regexp : Optional Text
-, path : Text
+{ backrefs : Optional Text
 , backup : Optional Text
+, create : Optional Text
+, insertafter : Optional Text
+, insertbefore : Optional Text
 , line : Optional Text
+, others : Optional Text
+, path : Text
+, regexp : Optional Text
+, state : Optional Text
 }

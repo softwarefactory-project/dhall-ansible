@@ -1,12 +1,12 @@
-{ rules_egress : Optional (List Text)
+{ description : Optional Text
+, group_id : Optional Text
 , name : Optional Text
 , purge_rules : Optional Text
-, tags : Optional Text
-, rules : Optional (List Text)
-, purge_tags : Optional Bool
 , purge_rules_egress : Optional Text
+, purge_tags : Optional Bool
+, rules : Optional (List Text)
+, rules_egress : Optional (List Text)
 , state : Optional Text
+, tags : Optional Text
 , vpc_id : Optional Text
-, group_id : Optional Text
-, description : Optional Text
 }

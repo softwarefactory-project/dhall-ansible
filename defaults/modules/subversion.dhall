@@ -1,10 +1,10 @@
-{ username = None Text
+{ checkout = None Text
 , executable = None Text
-, force = None Text
-, update = None Text
-, switch = None Text
 , export = None Text
+, force = None Text
 , password = None Text
-, checkout = None Text
 , revision = None Text
+, switch = None Text
+, update = None Text
+, username = None Text
 }

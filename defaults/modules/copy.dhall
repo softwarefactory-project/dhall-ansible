@@ -1,10 +1,9 @@
-{ src = None Text
-, directory_mode = None Text
-, force = None Text
-, remote_src = None Text
+{ backup = None Text
 , content = None Text
+, directory_mode = None Text
 , follow = None Text
-, backup = None Text
+, force = None Text
 , local_follow = None Text
-, mode = None Text
+, remote_src = None Text
+, src = None Text
 }

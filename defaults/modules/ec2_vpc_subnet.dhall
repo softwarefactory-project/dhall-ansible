@@ -1,11 +1,11 @@
 { assign_instances_ipv6 = None Bool
+, az = None Text
+, cidr = None Text
 , ipv6_cidr = None Text
-, tags = None Text
+, map_public = None Bool
 , purge_tags = None (List Bool)
 , state = None Text
-, wait_timeout = None Natural
-, map_public = None Bool
-, cidr = None Text
-, az = None Text
+, tags = None Text
 , wait = None Bool
+, wait_timeout = None Natural
 }

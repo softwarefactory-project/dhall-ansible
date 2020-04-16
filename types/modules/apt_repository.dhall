@@ -1,8 +1,8 @@
-{ filename : Optional (List Text)
+{ codename : Optional Text
+, filename : Optional (List Text)
+, mode : Optional (List Natural)
 , repo : Text
 , state : Optional Text
 , update_cache : Optional Text
-, mode : Optional (List Natural)
-, codename : Optional Text
 , validate_certs : Optional Text
 }

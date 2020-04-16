@@ -1,1 +1,1 @@
-{ state : Text, name : Text, persistent : Optional Text }
+{ name : Text, persistent : Optional Text, state : Text }

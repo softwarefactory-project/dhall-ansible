@@ -1,1 +1,1 @@
-{ name : Text, groups : Optional Text }
+{ groups : Optional Text, name : Text }

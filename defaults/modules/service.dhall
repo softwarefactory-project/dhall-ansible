@@ -1,8 +1,8 @@
-{ use = None Text
-, pattern = None Text
+{ arguments = None Text
 , enabled = None Text
-, state = None Text
-, sleep = None Text
-, arguments = None Text
+, pattern = None Text
 , runlevel = None Text
+, sleep = None Text
+, state = None Text
+, use = None Text
 }

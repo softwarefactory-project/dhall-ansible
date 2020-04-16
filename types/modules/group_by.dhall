@@ -1,1 +1,1 @@
-{ parents : Optional (List Text), key : Text }
+{ key : Text, parents : Optional (List Text) }

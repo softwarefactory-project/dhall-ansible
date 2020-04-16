@@ -1,16 +1,16 @@
-{ name : Optional Text
-, zone : Optional Text
-, volume_size : Optional Text
-, encrypted : Optional Bool
-, delete_on_termination : Optional Text
-, kms_key_id : Optional Text
-, volume_type : Optional Text
+{ delete_on_termination : Optional Text
 , device_name : Optional Text
-, instance : Optional Text
-, state : Optional (List Text)
-, iops : Optional Natural
-, snapshot : Optional Text
-, validate_certs : Optional Text
+, encrypted : Optional Bool
 , id : Optional Text
+, instance : Optional Text
+, iops : Optional Natural
+, kms_key_id : Optional Text
+, name : Optional Text
+, snapshot : Optional Text
+, state : Optional (List Text)
 , tags : Optional Text
+, validate_certs : Optional Text
+, volume_size : Optional Text
+, volume_type : Optional Text
+, zone : Optional Text
 }

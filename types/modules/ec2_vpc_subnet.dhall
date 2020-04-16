@@ -1,12 +1,12 @@
 { assign_instances_ipv6 : Optional Bool
+, az : Optional Text
+, cidr : Optional Text
 , ipv6_cidr : Optional Text
-, tags : Optional Text
+, map_public : Optional Bool
 , purge_tags : Optional (List Bool)
 , state : Optional Text
-, wait_timeout : Optional Natural
-, map_public : Optional Bool
+, tags : Optional Text
 , vpc_id : Text
-, cidr : Optional Text
-, az : Optional Text
 , wait : Optional Bool
+, wait_timeout : Optional Natural
 }

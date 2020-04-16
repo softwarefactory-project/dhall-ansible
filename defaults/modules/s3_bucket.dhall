@@ -1,9 +1,9 @@
-{ force = None Bool
-, tags = None Text
-, ceph = None Text
-, state = None Text
+{ ceph = None Text
+, force = None Bool
 , policy = None Text
-, s3_url = None Text
 , requester_pays = None Bool
+, s3_url = None Text
+, state = None Text
+, tags = None Text
 , versioning = None Text
 }

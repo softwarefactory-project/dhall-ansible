@@ -138,7 +138,7 @@ for module_name in module_list:
         if not module_type and module_name == 'ping':
             # fix empty def
             module_type = ['data: Optional Text']
-        of.write("{" + ', '.join(module_type) + "}")
+        of.write("{" + ', '.join(sorted(module_type)) + "}")
 
 #    print(ansible[module])
 

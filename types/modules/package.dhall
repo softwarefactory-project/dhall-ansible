@@ -1,1 +1,1 @@
-{ state : Text, use : Optional Text, name : Text }
+{ name : Text, state : Text, use : Optional Text }

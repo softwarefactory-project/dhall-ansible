@@ -1,6 +1,6 @@
-{ private = None Text
-, allow_duplicates = None Bool
+{ allow_duplicates = None Bool
+, defaults_from = None Text
+, private = None Text
 , tasks_from = None Text
 , vars_from = None Text
-, defaults_from = None Text
 }

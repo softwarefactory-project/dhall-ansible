@@ -1,5 +1,5 @@
-{ state : Optional Text
-, gid : Optional Text
+{ gid : Optional Text
 , name : Text
+, state : Optional Text
 , system : Optional Text
 }

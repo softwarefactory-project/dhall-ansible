@@ -1,1 +1,1 @@
-{ policy : Optional Text, state : Text, conf : Optional Text }
+{ conf : Optional Text, policy : Optional Text, state : Text }

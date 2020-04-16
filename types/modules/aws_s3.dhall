@@ -1,23 +1,23 @@
-{ prefix : Optional (List Text)
-, marker : Optional (List Text)
-, ignore_nonexistent_bucket : Optional Text
-, overwrite : Optional Text
+{ aws_access_key : Optional Text
 , aws_secret_key : Optional Text
-, encrypt : Optional Bool
-, rgw : Optional Bool
-, retries : Optional Natural
-, max_keys : Optional (List Natural)
-, version : Optional Text
-, s3_url : Optional Text
-, mode : List Text
-, permission : Optional (List Text)
-, dest : Optional Text
-, object : Optional Text
-, src : Optional Text
-, aws_access_key : Optional Text
-, region : Optional Text
 , bucket : Text
-, headers : Optional Text
+, dest : Optional Text
+, encrypt : Optional Bool
 , expiration : Optional Natural
+, headers : Optional Text
+, ignore_nonexistent_bucket : Optional Text
+, marker : Optional (List Text)
+, max_keys : Optional (List Natural)
 , metadata : Optional Text
+, mode : List Text
+, object : Optional Text
+, overwrite : Optional Text
+, permission : Optional (List Text)
+, prefix : Optional (List Text)
+, region : Optional Text
+, retries : Optional Natural
+, rgw : Optional Bool
+, s3_url : Optional Text
+, src : Optional Text
+, version : Optional Text
 }

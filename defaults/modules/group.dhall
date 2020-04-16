@@ -1,1 +1,1 @@
-{ state = None Text, gid = None Text, system = None Text }
+{ gid = None Text, state = None Text, system = None Text }

@@ -1,12 +1,12 @@
-{ file_type = None Text
-, age = None Text
-, contains = None Text
-, recurse = None Text
+{ age = None Text
 , age_stamp = None Text
-, patterns = None (List Text)
-, get_checksum = None Text
-, use_regex = None Text
+, contains = None Text
+, file_type = None Text
 , follow = None Text
+, get_checksum = None Text
 , hidden = None Text
+, patterns = None (List Text)
+, recurse = None Text
 , size = None Text
+, use_regex = None Text
 }

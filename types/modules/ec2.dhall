@@ -1,37 +1,37 @@
-{ kernel : Optional Text
-, image : Text
-, user_data : Optional Text
-, termination_protection : Optional Bool
-, private_ip : Optional Text
-, spot_type : Optional Text
-, id : Optional Text
-, source_dest_check : Optional Bool
-, spot_wait_timeout : Optional Natural
-, monitoring : Optional Bool
-, zone : Optional Text
-, exact_count : Optional Text
-, ebs_optimized : Optional Text
-, state : Optional Text
-, placement_group : Optional Text
-, spot_launch_group : Optional Text
-, key_name : Optional Text
-, ramdisk : Optional Text
-, count_tag : Optional Text
-, vpc_subnet_id : Optional Text
-, instance_ids : Optional (List Text)
-, spot_price : Optional Text
-, tenancy : Optional Text
-, assign_public_ip : Optional Bool
-, group : Optional (List Text)
-, wait : Optional Text
+{ assign_public_ip : Optional Bool
 , count : Optional Natural
-, instance_profile_name : Optional Text
-, region : Optional Text
-, network_interfaces : Optional (List Text)
-, instance_initiated_shutdown_behavior : Optional Text
-, instance_type : Text
-, wait_timeout : Optional Natural
-, volumes : Optional (List Text)
-, instance_tags : Optional Text
+, count_tag : Optional Text
+, ebs_optimized : Optional Text
+, exact_count : Optional Text
+, group : Optional (List Text)
 , group_id : Optional (List Text)
+, id : Optional Text
+, image : Text
+, instance_ids : Optional (List Text)
+, instance_initiated_shutdown_behavior : Optional Text
+, instance_profile_name : Optional Text
+, instance_tags : Optional Text
+, instance_type : Text
+, kernel : Optional Text
+, key_name : Optional Text
+, monitoring : Optional Bool
+, network_interfaces : Optional (List Text)
+, placement_group : Optional Text
+, private_ip : Optional Text
+, ramdisk : Optional Text
+, region : Optional Text
+, source_dest_check : Optional Bool
+, spot_launch_group : Optional Text
+, spot_price : Optional Text
+, spot_type : Optional Text
+, spot_wait_timeout : Optional Natural
+, state : Optional Text
+, tenancy : Optional Text
+, termination_protection : Optional Bool
+, user_data : Optional Text
+, volumes : Optional (List Text)
+, vpc_subnet_id : Optional Text
+, wait : Optional Text
+, wait_timeout : Optional Natural
+, zone : Optional Text
 }

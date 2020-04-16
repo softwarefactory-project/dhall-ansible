@@ -1,6 +1,6 @@
-{ unseen : Optional Bool
-, vtype : Optional Text
+{ name : Text
 , question : Optional Text
-, name : Text
+, unseen : Optional Bool
 , value : Optional Text
+, vtype : Optional Text
 }

@@ -1,1 +1,1 @@
-{ key_value : Text, cacheable : Optional Bool }
+{ cacheable : Optional Bool, key_value : Text }

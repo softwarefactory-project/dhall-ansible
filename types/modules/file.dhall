@@ -1,8 +1,7 @@
-{ src : Optional Text
+{ follow : Optional Text
 , force : Optional Text
-, recurse : Optional Text
-, state : Optional Text
 , path : Text
-, follow : Optional Text
-, mode : Optional Text
+, recurse : Optional Text
+, src : Optional Text
+, state : Optional Text
 }

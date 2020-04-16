@@ -1,12 +1,12 @@
-{ username : Optional Text
-, executable : Optional Text
-, force : Optional Text
+{ checkout : Optional Text
 , dest : Text
-, update : Optional Text
-, repo : Text
-, switch : Optional Text
+, executable : Optional Text
 , export : Optional Text
+, force : Optional Text
 , password : Optional Text
-, checkout : Optional Text
+, repo : Text
 , revision : Optional Text
+, switch : Optional Text
+, update : Optional Text
+, username : Optional Text
 }
