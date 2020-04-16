@@ -58,7 +58,7 @@ def type(type: Path) -> None:
 
     type_def = type.read_text()[1:-1].strip('{').strip('}').split(',')
     defaults = list(map(
-        mk_optional, filter(is_optional, map(read_type, type_def))))
+        mk_optional, sorted(filter(is_optional, map(read_type, type_def)))))
     if not defaults:
         default = "{=}"
     else:
