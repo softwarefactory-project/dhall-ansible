@@ -1,4 +1,15 @@
 { name : Optional Text
+, loop : Optional Text
+, loop_control : Optional ./loop_control.dhall
+, action : Optional Text
+, async_val : Optional Natural
+, delay : Optional Natural
+, delegate_to : Optional Text
+, delegate_facts : Optional Bool
+, notify : Optional (List Text)
+, poll : Optional Natural
+, retries : Optional Natural
+, until : Optional Text
 , register : Optional Text
 , failed_when : Optional Text
 , changed_when : Optional Text

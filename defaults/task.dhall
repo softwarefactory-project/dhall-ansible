@@ -1,4 +1,15 @@
 { name = None Text
+, loop = None Text
+, loop_control = None ../types/loop_control.dhall
+, action = None Text
+, async_val = None Natural
+, delay = None Natural
+, delegate_to = None Text
+, delegate_facts = None Bool
+, notify = None (List Text)
+, poll = None Natural
+, retries = None Natural
+, until = None Text
 , register = None Text
 , failed_when = None Text
 , changed_when = None Text
