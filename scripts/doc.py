@@ -20,7 +20,8 @@ dhallstart = doc.index('```dhall')
 dhallend = doc[dhallstart:].index('```') + dhallstart
 demostart = doc.index('```yaml')
 demoend = doc[demostart:].index('```') + demostart
-demo = subprocess.Popen(['dhall-to-yaml', '--file', './examples/demo.dhall'], stdout=subprocess.PIPE)
+demo = subprocess.Popen(['dhall-to-yaml'], stdout=subprocess.PIPE, stdin=subprocess.PIPE)
+demofile = open("examples/demo.dhall").read().replace("https://raw.githubusercontent.com/TristanCacqueray/dhall-ansible/master/package.dhall", "./package.dhall").encode('utf-8')
 newdoc = doc[:dhallstart + 2] + open('examples/demo.dhall').read().split('\n') + \
-    doc[dhallend:demostart + 2] + demo.communicate()[0].decode('utf-8').split('\n')[1:] + doc[demoend:]
+    doc[dhallend:demostart + 2] + demo.communicate(demofile)[0].decode('utf-8').split('\n')[1:] + doc[demoend:]
 exit(0) if newdoc == doc else open('README.md', 'w').write('\n'.join(newdoc)); print('README.md updated!')

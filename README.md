@@ -22,11 +22,11 @@ will update the `types/task.dhall` and schemas files.
 ```dhall
 {- ./examples/demo.dhall -}
 let Ansible =
-      https://raw.githubusercontent.com/TristanCacqueray/dhall-ansible/v0.1.0/package.dhall sha256:a868e39f7cf255cfe5addc1639e0f4dc175a1ba95576da519fda2be72f1bcfb7
+      https://raw.githubusercontent.com/TristanCacqueray/dhall-ansible/master/package.dhall
 
 in  [ Ansible.Play::{
       , hosts = "localhost"
-      , tasks =
+      , tasks = Some
         [ Ansible.Task::{
           , debug = Some Ansible.Debug::{ msg = Some "Hello world" }
           }

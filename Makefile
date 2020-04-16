@@ -2,7 +2,6 @@ all: update lint freeze test doc
 
 test:
 	@bash -c 'for f in $$(find tests/ -name "*.yaml"); do yaml-to-dhall "List (./package.dhall).Play.Type" < $$f > /dev/null; done'
-	@dhall-to-yaml --explain --file examples/demo.dhall > /dev/null
 
 update:
 	@python3 scripts/update.py
