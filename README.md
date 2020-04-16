@@ -9,12 +9,16 @@ why you might want to do this.
 
 ## Contribute
 
-The binding are not complete and the schemas may be missing attributes such as `vars` or `block` task.
 Pull Request are welcome. Only the `types/` files or the `scripts/generate.py` script needs
 to be updated, then run the `make` command to update the schemas and defaults.
 
 For example to add new module, create a file name `types/modules/${module-name}.dhall` and `make`
 will update the `types/task.dhall` and schemas files.
+
+Only the simplified type for `play.hosts`, `play.roles`, `play.vars` and `tasks.vars` is
+currently supported. The alternative are:
+* Support only the complex type (List Text, List RoleDict, JSON/Type vars).
+* Support both using an Union <Simplified | Complex> form.
 
 
 ## Example
