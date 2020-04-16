@@ -1,7 +1,7 @@
-all: update lint freeze doc
+all: update lint freeze test doc
 
 test:
-	@dhall-to-yaml --omit-empty --explain --file examples/demo.dhall
+	@dhall-to-yaml --explain --file examples/demo.dhall > /dev/null
 
 update:
 	@python3 scripts/update.py

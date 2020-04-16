@@ -32,7 +32,7 @@ in  [ ansible.Play::{
 ```
 
 ```yaml
-# dhall-to-yaml --omit-empty --explain --file examples/demo.dhall
+# dhall-to-yaml --file examples/demo.dhall
 - hosts: localhost
   tasks:
     - debug:
