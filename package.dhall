@@ -111,7 +111,7 @@
 , Pip =
     ./schemas/modules/pip.dhall sha256:60c2aae350c1855ac6a963b8b0421de26d7ca6c1270eeaf57fd9254d412d03fe
 , Play =
-    ./schemas/play.dhall sha256:4664b4d57ebbe99321a891e5bc39261018091f3e871f2092c0e514253b32a019
+    ./schemas/play.dhall sha256:6b638f5d3a2af398608b65388f54e0190561f9df099379e95c50045b3cf0bea6
 , RpmKey =
     ./schemas/modules/rpm_key.dhall sha256:4c8dc8a7e92f0a2a43376b6bcf07dd4b72da56eaa29bd0a6e533c3441aa42240
 , S3Bucket =

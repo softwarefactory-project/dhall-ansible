@@ -1,4 +1,6 @@
 - hosts: all
+  roles:
+    - test-role
   tasks:
     - debug:
         msg: "Hello"
