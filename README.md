@@ -4,23 +4,35 @@
 so you can generate Ansible playbooks from Dhall expressions.
 This will let you easily typecheck, template and modularize your Ansible playbooks.
 
+See the [dhall-kubernetes][dhall-kubernetes] demonstration for a concrete example of
+why you might want to do this.
+
+## Contribute
+
+The binding are not complete and the schemas may be missing attributes such as `vars` or `block` task.
+Pull Request are welcome. Only the `types/` files or the `scripts/generate.py` script needs
+to be updated, then run the `make` command to update the schemas and defaults.
+
+For example to add new module, create a file name `types/modules/${module-name}.dhall` and `make`
+will update the `types/task.dhall` and schemas files.
+
 
 ## Example
 
 ```dhall
 {- ./examples/demo.dhall -}
-let ansible =
-      https://raw.githubusercontent.com/TristanCacqueray/dhall-ansible/master/package.dhall sha256:da945f14b9acc74584624595e9d75c1c91bb3938d35464f18f14dd90845fcf30
+let Ansible =
+      https://raw.githubusercontent.com/TristanCacqueray/dhall-ansible/v0.1.0/package.dhall sha256:a868e39f7cf255cfe5addc1639e0f4dc175a1ba95576da519fda2be72f1bcfb7
 
-in  [ ansible.Play::{
+in  [ Ansible.Play::{
       , hosts = "localhost"
       , tasks =
-        [ ansible.Task::{
-          , debug = Some ansible.Debug::{ msg = Some "Hello world" }
+        [ Ansible.Task::{
+          , debug = Some Ansible.Debug::{ msg = Some "Hello world" }
           }
-        , ansible.Task::{
+        , Ansible.Task::{
           , name = Some "Installing package"
-          , package = Some ansible.Package::{
+          , package = Some Ansible.Package::{
             , name = "emacs-nox"
             , state = "present"
             }
@@ -44,10 +56,7 @@ in  [ ansible.Play::{
 
 ```
 
-## Adding new modules
-
-Update the scripts/generate.py file or simply write a new `types/modules/${module-name}.dhall` file
-and run the `make` command to update the schemas and defaults.
 
 [dhall-lang]: https://dhall-lang.org
 [Ansible]: https://ansible.com
+[dhall-kubernetes]: https://github.com/dhall-lang/dhall-kubernetes

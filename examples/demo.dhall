@@ -1,15 +1,15 @@
-let ansible =
-      https://raw.githubusercontent.com/TristanCacqueray/dhall-ansible/master/package.dhall sha256:da945f14b9acc74584624595e9d75c1c91bb3938d35464f18f14dd90845fcf30
+let Ansible =
+      https://raw.githubusercontent.com/TristanCacqueray/dhall-ansible/v0.1.0/package.dhall sha256:a868e39f7cf255cfe5addc1639e0f4dc175a1ba95576da519fda2be72f1bcfb7
 
-in  [ ansible.Play::{
+in  [ Ansible.Play::{
       , hosts = "localhost"
       , tasks =
-        [ ansible.Task::{
-          , debug = Some ansible.Debug::{ msg = Some "Hello world" }
+        [ Ansible.Task::{
+          , debug = Some Ansible.Debug::{ msg = Some "Hello world" }
           }
-        , ansible.Task::{
+        , Ansible.Task::{
           , name = Some "Installing package"
-          , package = Some ansible.Package::{
+          , package = Some Ansible.Package::{
             , name = "emacs-nox"
             , state = "present"
             }
