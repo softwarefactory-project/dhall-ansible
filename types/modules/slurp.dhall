@@ -1,1 +1,1 @@
-{ src : Text }
+{ path : Optional Text, src : Text }

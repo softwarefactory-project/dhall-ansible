@@ -5,5 +5,5 @@
 , keyserver = None Text
 , state = None Text
 , url = None Text
-, validate_certs = None Text
+, validate_certs = None Bool
 }

@@ -1,1 +1,5 @@
-{ name : Text, persistent : Optional Text, state : Text }
+{ ignore_selinux_state : Optional Bool
+, name : Text
+, persistent : Optional Bool
+, state : Bool
+}

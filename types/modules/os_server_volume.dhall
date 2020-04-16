@@ -1,6 +1,6 @@
-{ volume : Text
+{ availability_zone : Optional Text
 , device : Optional Text
-, state : Optional Text
-, availability_zone : Optional Text
 , server : Text
+, state : Optional Text
+, volume : Text
 }

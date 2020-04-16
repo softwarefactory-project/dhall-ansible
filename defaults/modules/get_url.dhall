@@ -1,16 +1,19 @@
-{ backup = None Text
+{ backup = None Bool
 , checksum = None Text
 , client_cert = None Text
 , client_key = None Text
-, force = None Text
-, force_basic_auth = None Text
+, force = None Bool
+, force_basic_auth = None Bool
 , headers = None Text
-, others = None Text
+, http_agent = None Text
+, password = None Text
 , sha256sum = None Text
+, thirsty = None Bool
 , timeout = None Natural
 , tmp_dest = None Text
 , url_password = None Text
 , url_username = None Text
-, use_proxy = None Text
-, validate_certs = None Text
+, use_proxy = None Bool
+, username = None Text
+, validate_certs = None Bool
 }

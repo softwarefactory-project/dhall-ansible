@@ -5,5 +5,5 @@
 , keyserver : Optional Text
 , state : Optional Text
 , url : Optional Text
-, validate_certs : Optional Text
+, validate_certs : Optional Bool
 }

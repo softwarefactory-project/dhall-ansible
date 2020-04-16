@@ -1,27 +1,27 @@
-{ archive : Optional Text
-, checksum : Optional Text
-, compress : Optional Text
-, copy_links : Optional Text
-, delete : Optional Text
+{ archive : Optional Bool
+, checksum : Optional Bool
+, compress : Optional Bool
+, copy_links : Optional Bool
+, delete : Optional Bool
 , dest : Text
-, dest_port : Optional Text
-, dirs : Optional Text
-, existing_only : Optional Text
-, group : Optional Text
-, link_dest : Optional Text
-, links : Optional Text
+, dest_port : Optional Natural
+, dirs : Optional Bool
+, existing_only : Optional Bool
+, group : Optional Bool
+, link_dest : Optional (List Text)
+, links : Optional Bool
 , mode : Optional Text
-, owner : Optional Text
-, partial : Optional Text
-, perms : Optional Text
+, owner : Optional Bool
+, partial : Optional Bool
+, perms : Optional Bool
 , private_key : Optional Text
-, recursive : Optional Text
-, rsync_opts : Optional Text
+, recursive : Optional Bool
+, rsync_opts : Optional (List Text)
 , rsync_path : Optional Text
 , rsync_timeout : Optional Natural
 , set_remote_user : Optional Bool
 , src : Text
-, times : Optional Text
-, use_ssh_args : Optional Text
-, verify_host : Optional Text
+, times : Optional Bool
+, use_ssh_args : Optional Bool
+, verify_host : Optional Bool
 }

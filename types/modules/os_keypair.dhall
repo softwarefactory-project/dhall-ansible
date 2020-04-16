@@ -1,6 +1,6 @@
-{ public_key : Optional Text
-, state : Optional Text
-, public_key_file : Optional Text
+{ availability_zone : Optional Text
 , name : Text
-, availability_zone : Optional Text
+, public_key : Optional Text
+, public_key_file : Optional Text
+, state : Optional Text
 }

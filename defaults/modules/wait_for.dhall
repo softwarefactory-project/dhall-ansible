@@ -5,7 +5,7 @@
 , host = None Text
 , msg = None Text
 , path = None Text
-, port = None Text
+, port = None Natural
 , search_regex = None Text
 , sleep = None Natural
 , state = None Text

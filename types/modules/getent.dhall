@@ -1,5 +1,6 @@
 { database : Text
-, fail_key : Optional Text
+, fail_key : Optional Bool
 , key : Optional Text
-, split : Optional (List Text)
+, service : Optional Text
+, split : Optional Text
 }

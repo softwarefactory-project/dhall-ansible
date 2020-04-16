@@ -1,10 +1,10 @@
-{ enable_snat : Optional Bool
-, network : Optional Text
+{ admin_state_up : Optional Bool
 , availability_zone : Optional Text
+, enable_snat : Optional Bool
+, external_fixed_ips : Optional Text
 , interfaces : Optional (List Text)
-, admin_state_up : Optional Bool
+, name : Text
+, network : Optional Text
 , project : Optional Text
 , state : Optional Text
-, external_fixed_ips : Optional Text
-, name : Text
 }

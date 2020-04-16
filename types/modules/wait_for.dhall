@@ -5,7 +5,7 @@
 , host : Optional Text
 , msg : Optional Text
 , path : Optional Text
-, port : Optional Text
+, port : Optional Natural
 , search_regex : Optional Text
 , sleep : Optional Natural
 , state : Optional Text

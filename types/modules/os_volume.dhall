@@ -1,11 +1,12 @@
-{ display_name : Text
-, availability_zone : Optional Text
-, image : Optional Text
-, volume_type : Optional Text
-, volume : Optional Text
-, state : Optional Text
+{ availability_zone : Optional Text
 , display_description : Optional Text
-, snapshot_id : Optional Text
+, display_name : Text
+, image : Optional Text
+, metadata : Optional Text
 , scheduler_hints : Optional Text
 , size : Optional Text
+, snapshot_id : Optional Text
+, state : Optional Text
+, volume : Optional Text
+, volume_type : Optional Text
 }

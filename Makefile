@@ -7,6 +7,11 @@ test:
 update:
 	@python3 scripts/update.py
 
+generate: do-generate lint
+
+do-generate:
+	@python3 scripts/generate.py
+
 freeze:
 	@dhall freeze --inplace ./package.dhall --all
 

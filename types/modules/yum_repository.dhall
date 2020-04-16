@@ -1,49 +1,53 @@
-{ async : Optional Text
-, bandwidth : Optional Natural
-, baseurl : Optional (List Text)
-, cost : Optional Natural
-, deltarpm_metadata_percentage : Optional Natural
-, deltarpm_percentage : Optional Natural
+{ async : Optional Bool
+, bandwidth : Optional Text
+, baseurl : Optional Text
+, ca_cert : Optional Text
+, client_cert : Optional Text
+, client_key : Optional Text
+, cost : Optional Text
+, deltarpm_metadata_percentage : Optional Text
+, deltarpm_percentage : Optional Text
 , description : Optional Text
-, enabled : Optional Text
-, enablegroups : Optional Text
+, enabled : Optional Bool
+, enablegroups : Optional Bool
 , exclude : Optional (List Text)
-, failovermethod : Optional (List Text)
+, failovermethod : Optional Text
 , file : Optional Text
 , gpgcakey : Optional Text
-, gpgcheck : Optional Text
-, gpgkey : Optional (List Text)
+, gpgcheck : Optional Bool
+, gpgkey : Optional Text
 , http_caching : Optional Text
 , include : Optional Text
 , includepkgs : Optional (List Text)
 , ip_resolve : Optional Text
-, keepalive : Optional Text
+, keepalive : Optional Bool
 , keepcache : Optional Text
-, metadata_expire : Optional Natural
-, metadata_expire_filter : Optional (List Text)
-, metalink : Optional (List Text)
-, mirrorlist : Optional (List Text)
-, mirrorlist_expire : Optional (List Natural)
+, metadata_expire : Optional Text
+, metadata_expire_filter : Optional Text
+, metalink : Optional Text
+, mirrorlist : Optional Text
+, mirrorlist_expire : Optional Text
 , name : Text
 , password : Optional Text
-, priority : Optional Natural
-, protect : Optional Text
+, priority : Optional Text
+, protect : Optional Bool
 , proxy : Optional Text
 , proxy_password : Optional Text
 , proxy_username : Optional Text
-, repo_gpgcheck : Optional Text
+, repo_gpgcheck : Optional Bool
 , reposdir : Optional Text
-, retries : Optional Natural
-, s3_enabled : Optional Text
-, skip_if_unavailable : Optional Text
-, ssl_check_cert_permissions : Optional Text
+, retries : Optional Text
+, s3_enabled : Optional Bool
+, skip_if_unavailable : Optional Bool
+, ssl_check_cert_permissions : Optional Bool
 , sslcacert : Optional Text
 , sslclientcert : Optional Text
 , sslclientkey : Optional Text
-, sslverify : Optional Text
+, sslverify : Optional Bool
 , state : Optional Text
 , throttle : Optional Text
-, timeout : Optional Natural
-, ui_repoid_vars : Optional (List Text)
+, timeout : Optional Text
+, ui_repoid_vars : Optional Text
 , username : Optional Text
+, validate_certs : Optional Bool
 }

@@ -1,1 +1,5 @@
-{ conf = None Text, policy = None Text }
+{ conf = None Text
+, configfile = None Text
+, file = None Text
+, policy = None Text
+}

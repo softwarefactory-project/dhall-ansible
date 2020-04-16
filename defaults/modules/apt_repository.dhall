@@ -1,7 +1,7 @@
 { codename = None Text
-, filename = None (List Text)
-, mode = None (List Natural)
+, filename = None Text
+, mode = None Text
 , state = None Text
-, update_cache = None Text
-, validate_certs = None Text
+, update_cache = None Bool
+, validate_certs = None Bool
 }

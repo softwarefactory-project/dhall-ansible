@@ -1,5 +1,5 @@
 { chdir : Optional Text
-, editable : Optional Text
+, editable : Optional Bool
 , executable : Optional Text
 , extra_args : Optional Text
 , name : Optional (List Text)
@@ -10,5 +10,5 @@
 , virtualenv : Optional Text
 , virtualenv_command : Optional Text
 , virtualenv_python : Optional Text
-, virtualenv_site_packages : Optional Text
+, virtualenv_site_packages : Optional Bool
 }

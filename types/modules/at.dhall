@@ -1,7 +1,7 @@
 { command : Optional Text
-, count : Text
+, count : Natural
 , script_file : Optional Text
 , state : Optional Text
-, unique : Optional Text
+, unique : Optional Bool
 , units : Text
 }

@@ -1,1 +1,1 @@
-{ state = None Text, validate_certs = None Text }
+{ fingerprint = None Text, state = None Text, validate_certs = None Bool }

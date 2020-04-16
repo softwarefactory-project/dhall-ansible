@@ -1,14 +1,22 @@
-{ changeset_name = None Text
+{ backoff_delay = None Natural
+, backoff_max_delay = None Natural
+, backoff_retries = None Natural
+, capabilities = None (List Text)
+, changeset_name = None Text
 , create_changeset = None Bool
-, disable_rollback = None Text
+, create_timeout = None Text
+, disable_rollback = None Bool
+, events_limit = None Text
 , notification_arns = None Text
+, on_create_failure = None Text
 , role_arn = None Text
 , stack_policy = None Text
 , state = None Text
 , tags = None Text
 , template = None Text
+, template_body = None Text
 , template_format = None Text
-, template_parameters = None (List Text)
+, template_parameters = None Text
 , template_url = None Text
-, termination_protection = None Text
+, termination_protection = None Bool
 }

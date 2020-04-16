@@ -1,7 +1,13 @@
-{ checksum_algorithm = None Text
-, follow = None Text
-, get_attributes = None Text
-, get_checksum = None Text
-, get_md5 = None Text
-, get_mime = None Text
+{ attr = None Bool
+, attributes = None Bool
+, checksum = None Text
+, checksum_algo = None Text
+, checksum_algorithm = None Text
+, follow = None Bool
+, get_attributes = None Bool
+, get_checksum = None Bool
+, get_mime = None Bool
+, mime = None Bool
+, mime-type = None Bool
+, mime_type = None Bool
 }
