@@ -7,6 +7,10 @@
 , delay : Optional Natural
 , delegate_to : Optional Text
 , delegate_facts : Optional Bool
+, become : Optional Bool
+, become_method : Optional Text
+, become_user : Optional Text
+, become_flags : Optional Text
 , notify : Optional (List Text)
 , poll : Optional Natural
 , retries : Optional Natural

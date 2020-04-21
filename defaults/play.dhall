@@ -1,4 +1,8 @@
-{ fact_path = None Text
+{ become = None Bool
+, become_flags = None Text
+, become_method = None Text
+, become_user = None Text
+, fact_path = None Text
 , force_handlers = None Bool
 , gather_facts = None Bool
 , gather_subset = None (List Text)

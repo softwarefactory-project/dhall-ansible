@@ -12,6 +12,10 @@
 , at = None ../types/modules/at.dhall
 , authorized_key = None ../types/modules/authorized_key.dhall
 , aws_s3 = None ../types/modules/aws_s3.dhall
+, become = None Bool
+, become_flags = None Text
+, become_method = None Text
+, become_user = None Text
 , blockinfile = None ../types/modules/blockinfile.dhall
 , changed_when = None Text
 , cloudformation = None ../types/modules/cloudformation.dhall

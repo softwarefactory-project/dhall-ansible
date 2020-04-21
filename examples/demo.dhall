@@ -10,6 +10,7 @@ in  [ Ansible.Play::{
           }
         , Ansible.Task::{
           , name = Some "Installing package"
+          , become = Some True
           , package = Some Ansible.Package::{
             , name = "emacs-nox"
             , state = "present"

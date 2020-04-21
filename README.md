@@ -37,6 +37,7 @@ in  [ Ansible.Play::{
           }
         , Ansible.Task::{
           , name = Some "Installing package"
+          , become = Some True
           , package = Some Ansible.Package::{
             , name = "emacs-nox"
             , state = "present"
@@ -54,7 +55,8 @@ in  [ Ansible.Play::{
   tasks:
     - debug:
         msg: "Hello world"
-    - name: "Installing package"
+    - become: true
+      name: "Installing package"
       package:
         name: emacs-nox
         state: present

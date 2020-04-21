@@ -16,4 +16,8 @@
 , serial : Optional (List Text)
 , strategy : Optional Text
 , order : Optional Text
+, become : Optional Bool
+, become_method : Optional Text
+, become_user : Optional Text
+, become_flags : Optional Text
 }
