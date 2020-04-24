@@ -43,6 +43,7 @@
 , git = None ../types/modules/git.dhall
 , group = None ../types/modules/group.dhall
 , group_by = None ../types/modules/group_by.dhall
+, ignore_errors = None Bool
 , import_playbook = None ../types/modules/import_playbook.dhall
 , import_role = None ../types/modules/import_role.dhall
 , import_tasks = None ../types/modules/import_tasks.dhall
@@ -95,6 +96,7 @@
 , vars = None ../types/map_text.dhall
 , wait_for = None ../types/modules/wait_for.dhall
 , wait_for_connection = None ../types/modules/wait_for_connection.dhall
+, when = None Text
 , yum = None ../types/modules/yum.dhall
 , yum_repository = None ../types/modules/yum_repository.dhall
 }

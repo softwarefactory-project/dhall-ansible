@@ -16,9 +16,11 @@
 , retries : Optional Natural
 , until : Optional Text
 , register : Optional Text
+, ignore_errors : Optional Bool
 , failed_when : Optional Text
 , changed_when : Optional Text
 , command : Optional Text
+, when : Optional Text
 , args : Optional ./args.dhall
 , acl : Optional ./modules/acl.dhall
 , add_host : Optional ./modules/add_host.dhall
