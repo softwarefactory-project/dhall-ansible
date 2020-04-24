@@ -113,7 +113,7 @@
 , Pip =
     ./schemas/modules/pip.dhall sha256:51b3cc676edd303581ff5fdc876839c26454b9dbc16c1083af3e419cab4ea960
 , Play =
-    ./schemas/play.dhall sha256:3a25e09185010c2927627af0d4a70434af2ed23ca5d9829ae807923f75d44e4b
+    ./schemas/play.dhall sha256:d3b7f853117ebd7b87e1bfc06e255379f3dd0a17b620e1507f6bfca3d1bf1f99
 , RpmKey =
     ./schemas/modules/rpm_key.dhall sha256:dbba053f922e9bd0c8eed500c6dcf4cea6299f6b80a4123296ffffbd51129ef9
 , S3Bucket =
@@ -143,7 +143,7 @@
 , Systemd =
     ./schemas/modules/systemd.dhall sha256:0a4a9c4de96d1fe4dfaef759972fef703b9307998611f956ece460fbf6d6b561
 , Task =
-    ./schemas/task.dhall sha256:fbe09c0dcfea6309a90ed33d49463b8ca613d40492e7b87f0143deb5a925acae
+    ./schemas/task.dhall sha256:e568cd6223ce1c271f10d7dd8bac5f4397fe408e9768789ee51cc2707a81d1a2
 , Template =
     ./schemas/modules/template.dhall sha256:000cf1bd44cc9db2ee63ab938f192d864f5ef6257977aace93da94f861d1951d
 , Unarchive =
