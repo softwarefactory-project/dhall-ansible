@@ -8,6 +8,7 @@
 , delay : Optional Natural
 , delegate_to : Optional Text
 , delegate_facts : Optional Bool
+, no_log : Optional Bool
 , become : Optional Bool
 , become_method : Optional Text
 , become_user : Optional Text

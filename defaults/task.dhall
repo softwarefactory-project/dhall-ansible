@@ -57,6 +57,7 @@
 , loop_control = None ../types/loop_control.dhall
 , mount = None ../types/modules/mount.dhall
 , name = None Text
+, no_log = None Bool
 , notify = None (List Text)
 , os_keypair = None ../types/modules/os_keypair.dhall
 , os_network = None ../types/modules/os_network.dhall
