@@ -79,7 +79,7 @@
 , seboolean = None ../types/modules/seboolean.dhall
 , selinux = None ../types/modules/selinux.dhall
 , service = None ../types/modules/service.dhall
-, set_fact = None ../types/modules/set_fact.dhall
+, set_fact = None ../types/map_text.dhall
 , setup = None ../types/modules/setup.dhall
 , shell = None ../types/modules/shell.dhall
 , slurp = None ../types/modules/slurp.dhall

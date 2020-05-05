@@ -1,5 +1,6 @@
 { name : Optional Text
 , vars : Optional ./map_text.dhall
+, set_fact : Optional ./map_text.dhall
 , loop : Optional Text
 , loop_control : Optional ./loop_control.dhall
 , action : Optional Text
@@ -82,7 +83,6 @@
 , seboolean : Optional ./modules/seboolean.dhall
 , selinux : Optional ./modules/selinux.dhall
 , service : Optional ./modules/service.dhall
-, set_fact : Optional ./modules/set_fact.dhall
 , setup : Optional ./modules/setup.dhall
 , shell : Optional ./modules/shell.dhall
 , slurp : Optional ./modules/slurp.dhall

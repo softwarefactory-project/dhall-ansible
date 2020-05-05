@@ -113,7 +113,7 @@
 , Pip =
     ./schemas/modules/pip.dhall sha256:51b3cc676edd303581ff5fdc876839c26454b9dbc16c1083af3e419cab4ea960
 , Play =
-    ./schemas/play.dhall sha256:d3b7f853117ebd7b87e1bfc06e255379f3dd0a17b620e1507f6bfca3d1bf1f99
+    ./schemas/play.dhall sha256:9d5112c0af2c4a1a54330f537bf3ac17deb14d8a7ac069ca7cd20dab5ca3f728
 , RpmKey =
     ./schemas/modules/rpm_key.dhall sha256:dbba053f922e9bd0c8eed500c6dcf4cea6299f6b80a4123296ffffbd51129ef9
 , S3Bucket =
@@ -124,8 +124,6 @@
     ./schemas/modules/selinux.dhall sha256:a57ec8cd750c0eb1a3d9d02e26b9ac7a3c671a99402a33127c8d12d258762660
 , Service =
     ./schemas/modules/service.dhall sha256:1c3ce43bd12907c59ae49210a76a87010257e1d28d7148cccabd039068b87b1e
-, SetFact =
-    ./schemas/modules/set_fact.dhall sha256:f1a11a56f2f55cdc6e13db84034350c2b8e6167f633e8efabffc93f3aba77292
 , Setup =
     ./schemas/modules/setup.dhall sha256:43222800adab45199e79cb9ea539aa4f30693caa183c93e59dd378bdad4c1baa
 , Shell =
@@ -143,7 +141,7 @@
 , Systemd =
     ./schemas/modules/systemd.dhall sha256:0a4a9c4de96d1fe4dfaef759972fef703b9307998611f956ece460fbf6d6b561
 , Task =
-    ./schemas/task.dhall sha256:e568cd6223ce1c271f10d7dd8bac5f4397fe408e9768789ee51cc2707a81d1a2
+    ./schemas/task.dhall sha256:019b4025fa6bdc94b12a25e21181f61fe15609e27532738d23a500ba3ec6c889
 , Template =
     ./schemas/modules/template.dhall sha256:000cf1bd44cc9db2ee63ab938f192d864f5ef6257977aace93da94f861d1951d
 , Unarchive =

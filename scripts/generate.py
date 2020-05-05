@@ -116,7 +116,6 @@ module_list = (
     "debug",
     "fail",
     "pause",
-    "set_fact",
     "wait_for",
     "wait_for_connection",
 )
