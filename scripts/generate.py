@@ -80,6 +80,7 @@ module_list = (
     "apt",
     "apt_key",
     "apt_repository",
+    "cron",
     "dnf",
     "package",
     "rpm_key",

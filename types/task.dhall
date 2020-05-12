@@ -38,6 +38,7 @@
 , blockinfile : Optional ./modules/blockinfile.dhall
 , cloudformation : Optional ./modules/cloudformation.dhall
 , copy : Optional ./modules/copy.dhall
+, cron : Optional ./modules/cron.dhall
 , debconf : Optional ./modules/debconf.dhall
 , debug : Optional ./modules/debug.dhall
 , dnf : Optional ./modules/dnf.dhall

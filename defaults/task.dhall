@@ -21,6 +21,7 @@
 , cloudformation = None ../types/modules/cloudformation.dhall
 , command = None Text
 , copy = None ../types/modules/copy.dhall
+, cron = None ../types/modules/cron.dhall
 , debconf = None ../types/modules/debconf.dhall
 , debug = None ../types/modules/debug.dhall
 , delay = None Natural

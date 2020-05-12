@@ -1,0 +1,21 @@
+{ backup = None Bool
+, cron_file = None Text
+, day = None Text
+, disabled = None Bool
+, dom = None Text
+, dow = None Text
+, env = None Bool
+, hour = None Text
+, insertafter = None Text
+, insertbefore = None Text
+, job = None Text
+, minute = None Text
+, month = None Text
+, name = None Text
+, reboot = None Bool
+, special_time = None Text
+, state = None Text
+, user = None Text
+, value = None Text
+, weekday = None Text
+}
