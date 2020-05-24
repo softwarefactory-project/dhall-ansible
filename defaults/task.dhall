@@ -54,6 +54,7 @@
 , include_vars = None ../types/modules/include_vars.dhall
 , iptables = None ../types/modules/iptables.dhall
 , lineinfile = None ../types/modules/lineinfile.dhall
+, listen = None Text
 , loop = None Text
 , loop_control = None ../types/loop_control.dhall
 , mount = None ../types/modules/mount.dhall
