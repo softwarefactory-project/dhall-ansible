@@ -7,7 +7,7 @@
 , gather_facts = None Bool
 , gather_subset = None (List Text)
 , gather_timeout = None Natural
-, handlers = None (List Text)
+, handlers = None (List ../types/task.dhall)
 , max_fail_percentage = None Double
 , order = None Text
 , post_tasks = None (List ../types/task.dhall)

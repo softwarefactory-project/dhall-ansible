@@ -14,6 +14,7 @@
 , become_user : Optional Text
 , become_flags : Optional Text
 , notify : Optional (List Text)
+, listen : Optional Text
 , poll : Optional Natural
 , retries : Optional Natural
 , until : Optional Text
