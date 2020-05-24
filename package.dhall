@@ -115,7 +115,7 @@
 , Pip =
     ./schemas/modules/pip.dhall sha256:51b3cc676edd303581ff5fdc876839c26454b9dbc16c1083af3e419cab4ea960
 , Play =
-    ./schemas/play.dhall sha256:2ecf45c458f974c9ab99d445d52966afe3b7286fa527c7d37a6e229fcd3e9691
+    ./schemas/play.dhall sha256:13d873fb9263998fa4c949b5bee33857fffd56976c7ad82c757236b8ce1c61c2
 , RpmKey =
     ./schemas/modules/rpm_key.dhall sha256:dbba053f922e9bd0c8eed500c6dcf4cea6299f6b80a4123296ffffbd51129ef9
 , S3Bucket =
@@ -143,9 +143,9 @@
 , Systemd =
     ./schemas/modules/systemd.dhall sha256:0a4a9c4de96d1fe4dfaef759972fef703b9307998611f956ece460fbf6d6b561
 , Task =
-    ./schemas/task.dhall sha256:dd6f30546bdbeab486d7714ae4b513bed3a9680842864d93aa7eabeed85f8b63
+    ./schemas/task.dhall sha256:5b7b06a70ddfe16870a96c05cb50a474bdfa9e8e4f7b7acbcc70ea548664239f
 , Template =
-    ./schemas/modules/template.dhall sha256:000cf1bd44cc9db2ee63ab938f192d864f5ef6257977aace93da94f861d1951d
+    ./schemas/modules/template.dhall sha256:d3b72f75497c95d35c5eff2a80cf84f8c11398f249d5bef10be2f72213aaa8a9
 , Unarchive =
     ./schemas/modules/unarchive.dhall sha256:fd35d0123f9583bc0d6755cedde95ce6ffaf49ec0bd15bbbbbba43a2d820f253
 , Uri =
