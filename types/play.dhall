@@ -7,7 +7,7 @@
 , vars_files : Optional (List Text)
 , vars_prompt : Optional (List Text)
 , roles : Optional (List Text)
-, handlers : Optional (List Text)
+, handlers : Optional (List ./task.dhall)
 , pre_tasks : Optional (List ./task.dhall)
 , post_tasks : Optional (List ./task.dhall)
 , tasks : Optional (List ./task.dhall)
