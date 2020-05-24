@@ -54,9 +54,9 @@ in  [ Ansible.Play::{
 - hosts: localhost
   tasks:
     - debug:
-        msg: "Hello world"
+        msg: Hello world
     - become: true
-      name: "Installing package"
+      name: Installing package
       package:
         name: emacs-nox
         state: present
