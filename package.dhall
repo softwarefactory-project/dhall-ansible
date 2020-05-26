@@ -53,7 +53,7 @@
 , Fetch =
     ./schemas/modules/fetch.dhall sha256:5569821cc5c551ece14091b1eae6219fbdf7141892765168199266d26f84bb7c
 , File =
-    ./schemas/modules/file.dhall sha256:78e02276624c5831a9d3085675da034f4c6753c283a8aa0e2d063567a8bca2a8
+    ./schemas/modules/file.dhall sha256:c586bef00061fd9d7c327b12a81b94988745ede1c52755a2869eb07d0f943159
 , Find =
     ./schemas/modules/find.dhall sha256:9e7eac3ec8105fb743a5575a5c2fd07fdd1eebbf29f84328fe76d1ebfc648403
 , GetUrl =
@@ -86,6 +86,8 @@
     ./schemas/modules/lineinfile.dhall sha256:bdb01977e9bf030543d20eab36489c59bc1052c27b02e3c02f7660ebf2dc0f3d
 , LoopControl =
     ./schemas/loop_control.dhall sha256:8bd461548dbc03d17c49066538f9fcd2f1d6f4c1334b906d4adc19baed9cf943
+, LuksDevice =
+    ./schemas/modules/luks_device.dhall sha256:a6840d8a529aa53cbb78af4f7245255b02b9c6766a57ecf801974d29dbb5e2ee
 , Mount =
     ./schemas/modules/mount.dhall sha256:48792cfacc30e35125b0e638e354de3bed0b8be08d51f77273e74d010f5fb86a
 , OsKeypair =
@@ -108,6 +110,8 @@
     ./schemas/modules/os_volume.dhall sha256:faa1743a896bf124e422647e67f79301b606a77483a5f3f6e6d8f2b3b1faa4f1
 , Package =
     ./schemas/modules/package.dhall sha256:50b269ac08124c9735b822e43072ed422349b981a923a9f475ce8a5fae3956fd
+, Pacman =
+    ./schemas/modules/pacman.dhall sha256:30b6fc136f3aee727c1939ddcd67e8e4cb2dbdb729abdcc3a86a87c47ce7e60c
 , Pause =
     ./schemas/modules/pause.dhall sha256:6a777a9d52b4487be09b96a7dec3b94adf438d9071b2a8abbc9d04a743693fef
 , Ping =
@@ -115,7 +119,7 @@
 , Pip =
     ./schemas/modules/pip.dhall sha256:51b3cc676edd303581ff5fdc876839c26454b9dbc16c1083af3e419cab4ea960
 , Play =
-    ./schemas/play.dhall sha256:13d873fb9263998fa4c949b5bee33857fffd56976c7ad82c757236b8ce1c61c2
+    ./schemas/play.dhall sha256:6ca94f8f91ad7c331dd87f4ccd0580766aba3ccf614158ae610eff6803774a01
 , RpmKey =
     ./schemas/modules/rpm_key.dhall sha256:dbba053f922e9bd0c8eed500c6dcf4cea6299f6b80a4123296ffffbd51129ef9
 , S3Bucket =
@@ -143,7 +147,7 @@
 , Systemd =
     ./schemas/modules/systemd.dhall sha256:0a4a9c4de96d1fe4dfaef759972fef703b9307998611f956ece460fbf6d6b561
 , Task =
-    ./schemas/task.dhall sha256:5b7b06a70ddfe16870a96c05cb50a474bdfa9e8e4f7b7acbcc70ea548664239f
+    ./schemas/task.dhall sha256:3590511072016e56cf1f61f851df6d63abf6b109b3a08674dc2ea6c48c5b14df
 , Template =
     ./schemas/modules/template.dhall sha256:d3b72f75497c95d35c5eff2a80cf84f8c11398f249d5bef10be2f72213aaa8a9
 , Unarchive =

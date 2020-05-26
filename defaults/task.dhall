@@ -57,6 +57,7 @@
 , listen = None Text
 , loop = None Text
 , loop_control = None ../types/loop_control.dhall
+, luks_device = None ../types/modules/luks_device.dhall
 , mount = None ../types/modules/mount.dhall
 , name = None Text
 , no_log = None Bool
@@ -71,6 +72,7 @@
 , os_subnet = None ../types/modules/os_subnet.dhall
 , os_volume = None ../types/modules/os_volume.dhall
 , package = None ../types/modules/package.dhall
+, pacman = None ../types/modules/pacman.dhall
 , pause = None ../types/modules/pause.dhall
 , ping = None ../types/modules/ping.dhall
 , pip = None ../types/modules/pip.dhall
