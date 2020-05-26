@@ -1,12 +1,21 @@
 { access_time = None Text
 , access_time_format = None Text
+, attributes = None Text
 , dest = None Text
 , follow = None Bool
 , force = None Bool
+, group = None Text
+, mode = None Text
 , modification_time = None Text
 , modification_time_format = None Text
 , name = None Text
+, owner = None Text
 , recurse = None Bool
+, selevel = None Text
+, serole = None Text
+, setype = None Text
+, seuser = None Text
 , src = None Text
 , state = None Text
+, unsafe_writes = None Bool
 }

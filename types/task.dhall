@@ -67,6 +67,7 @@
 , include_vars : Optional ./modules/include_vars.dhall
 , iptables : Optional ./modules/iptables.dhall
 , lineinfile : Optional ./modules/lineinfile.dhall
+, luks_device : Optional ./modules/luks_device.dhall
 , mount : Optional ./modules/mount.dhall
 , os_keypair : Optional ./modules/os_keypair.dhall
 , os_network : Optional ./modules/os_network.dhall
@@ -78,6 +79,7 @@
 , os_subnet : Optional ./modules/os_subnet.dhall
 , os_volume : Optional ./modules/os_volume.dhall
 , package : Optional ./modules/package.dhall
+, pacman : Optional ./modules/pacman.dhall
 , pause : Optional ./modules/pause.dhall
 , ping : Optional ./modules/ping.dhall
 , pip : Optional ./modules/pip.dhall
