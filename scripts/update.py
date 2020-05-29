@@ -30,43 +30,6 @@ def write(dest: Path, content: str) -> None:
         print(f"{dest}: updated!")
 
 
-def type(type: Path) -> None:
-    type_name = str(type).replace('types/', '')
-    depth = len(type_name.split('/'))
-    root = "../" * depth
-    if type_name == 'task.dhall':
-        task_lines = list(filter(lambda x: 'Optional ./modules/' not in x, type.read_text().split('\n')[:-2]))
-        for module in sorted(os.listdir('types/modules')):
-            task_lines.append(', %s : Optional ./modules/%s' % (module.replace('.dhall', ''), module))
-        task_lines.append('}')
-        type.write_text('\n'.join(task_lines) + '\n')
-
-    schema = "Type = {root}/types/{name}, default = {root}/defaults/{name}".format(
-        root=root[:-1], name=type_name)
-    write(Path('schemas') / type_name, "{ " + schema + " }")
-
-    def mk_optional(n: List[str]) -> str:
-        name, value = n[0], n[1]
-        value = value.replace('Optional ', '').replace('./', root + 'types' + '/')
-        return f"{name} = None {value}"
-
-    def is_optional(n: List[str]) -> Any:
-        return n[1].startswith('Optional')
-
-    def read_type(s: str) -> List[str]:
-        return list(map(str.strip, s.split(':')))
-
-    type_def = type.read_text()[1:-1].strip('{').strip('}').split(',')
-    defaults = list(map(
-        mk_optional, sorted(filter(is_optional, map(read_type, type_def)))))
-    if not defaults:
-        default = "{=}"
-    else:
-        default = "{ %s%s}" % (
-            "\n, ".join(defaults), "\n" if len(defaults) > 1 else "")
-    write(Path('defaults') / type_name, default)
-
-
 def package(types: List[Path]) -> None:
     packages = list(sorted(map(lambda type: "%s = ./%s" % (
         ''.join(map(str.capitalize, type.name.replace('.dhall', '').split('_'))),
@@ -78,6 +41,5 @@ all_files: List[Path] = []
 for dir, _, files in os.walk('types/'):
     for file in filter(lambda f: f != "map_text.dhall", files):
         file_path = Path(dir) / file
-        type(file_path)
         all_files.append(file_path)
 package(all_files)
