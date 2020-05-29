@@ -5,7 +5,6 @@ test:
 
 update:
 	@./Shakefile.hs
-	@python3 scripts/update.py
 
 generate: do-generate lint
 

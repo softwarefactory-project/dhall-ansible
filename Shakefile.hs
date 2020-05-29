@@ -22,7 +22,8 @@
 {-# LANGUAGE RecordWildCards #-}
 
 import Control.Monad (unless)
-import Data.List (sortOn)
+import Data.Char (toUpper)
+import Data.List (sort, sortOn)
 import Data.Text (Text, pack, unpack)
 import Development.Shake
 import Development.Shake.Command
@@ -33,6 +34,7 @@ import Dhall.Core
 import Dhall.Map (fromList, toList)
 import Dhall.Parser (exprFromText)
 import Dhall.Pretty (prettyExpr)
+import Data.Void (Void)
 
 -- | Convert a dhall type record to a value record using None value for Optional attributes
 -- | >>> getDefaults "./types/test.dhall" "{ name : Text, become : Optional Bool, task : Optional ./Task.dhall }"
@@ -44,7 +46,7 @@ getDefaults fn content = decode
     decode = case exprFromText fn content of
       Left err -> error $ show err
       Right expr -> case Dhall.Core.denote expr of
-        Record record -> pack $ (show $ prettyExpr $ process record) <> "\n"
+        Record record -> expr2Text $ process record
         _ -> error $ fn <> ": is not a record type"
     process record = RecordLit $ fromList $ sortOn fst $ go $ toList record
     -- Process every record element
@@ -84,35 +86,65 @@ getDefaults fn content = decode
             }
       )
 
-mkSchemas :: Text -> Text -> Text
-mkSchemas tfn dfn = pack $ (show $ prettyExpr $ go) <> "\n"
+-- | Create a dhall schema for a type and default
+mkSchema :: FilePath -> FilePath -> Text
+mkSchema typePath defPath = expr2Text schema
   where
-    go = case exprFromText "test" ("{ Type = " <> tfn <> " , default = " <> dfn <> " }") of
-      Left err -> error $ show err
-      Right expr -> expr
+    schema = RecordLit (fromList [("Type", mkImport typePath), ("default", mkImport defPath)])
+
+-- | Create the final dhall package
+mkPackage :: [FilePath] -> Text
+mkPackage xs = expr2Text package
+  where
+    package = RecordLit (fromList $ sortOn fst $ map (\f -> (pack $ getName $ '_' :  takeBaseName f, mkImport f)) xs)
+    getName :: FilePath -> FilePath
+    getName [] = []
+    getName ('_':x:xs') = toUpper x: getName xs'
+    getName (x:xs') = x : getName xs'
+
+-- | Create a dhall Expr for a FilePath import
+mkImport :: FilePath -> Expr Void Import
+mkImport path = Embed import'
+  where
+    import' = Import importHashed Code
+    importHashed = ImportHashed Nothing importType
+    importType = Local prefix file
+    prefix
+      | take 3 path == "../" = Parent
+      | otherwise = Here
+    relPath
+      | take 3 path == "../" = drop 3 path
+      | take 2 path == "./"  = drop 2 path
+      | otherwise = path
+    file = File directory (pack $ takeFileName path)
+    directory = Directory (map pack $ reverse $ splitDirectories $ takeDirectory relPath)
+
+-- | Pretty format a dhall Expr
+expr2Text :: Expr Void Import -> Text
+expr2Text e = pack $ (show $ prettyExpr e) <> "\n"
 
 main :: IO ()
 main = shakeArgs shakeOptions {shakeFiles = "_build"} $ do
   want ["package.dhall"]
 
-  --  TODO: generate package
-  --  "package.dhall" %> \out -> do
-  phony "package.dhall" $ do
+  "package.dhall" %> \out -> do
     allFiles <- getDirectoryFiles "" ["types//*.dhall"]
     let files = filter ((/=) "types/map_text.dhall") allFiles
+    let schemas = (Prelude.map (sub "schemas") files)
     need (Prelude.map (sub "defaults") files)
-    need (Prelude.map (sub "schemas") files)
-    schemas <- getDirectoryFiles "" ["schemas//*.dhall"]
-    putInfo $ "package.dhall: created from " <> show schemas
+    need schemas
+    putInfo $ out <> ": updated"
+    writeFile' out $ unpack (mkPackage schemas)
 
   "schemas//*.dhall" %> \dst -> do
     let depth = (length $ splitPath dst) - 1
-    let prefix = mconcat $ take depth $ repeat (pack "../")
-    let typePath = prefix <> pack (sub "types" dst)
-    let defPath = prefix <> pack (sub "defaults" dst)
-    putInfo $ dst <> ": updated"
+    let prefix = mconcat $ take depth $ repeat "../"
+    let (typePath, defPath) = (sub "types" dst, sub "defaults" dst)
+    let (typeRel, defRel) = (prefix <> typePath, prefix <> defPath)
+    need [typePath, defPath]
+    putInfo $ dst <> ": updated with " <> typeRel <> " and " <> defRel
     -- TODO: ensure parent directory exists
-    writeFile' dst $ unpack (mkSchemas typePath defPath)
+    writeFile' dst $ unpack (mkSchema typeRel defRel)
 
   "defaults//*.dhall" %> \dst -> do
     let src = sub "types" dst
