@@ -20,6 +20,8 @@ from pathlib import Path
 from textwrap import dedent
 from typing import Any, Iterator, List
 
+from generate import attr2name
+
 
 def write(dest: Path, content: str) -> None:
     if content[-1] != "\n":
@@ -37,7 +39,7 @@ def type(type: Path) -> None:
     if type_name == 'task.dhall':
         task_lines = list(filter(lambda x: 'Optional ./modules/' not in x, type.read_text().split('\n')[:-2]))
         for module in sorted(os.listdir('types/modules')):
-            task_lines.append(', %s : Optional ./modules/%s' % (module.replace('.dhall', ''), module))
+            task_lines.append(', %s : Optional ./modules/%s' % (attr2name(module.replace('.dhall', '')), module))
         task_lines.append('}')
         type.write_text('\n'.join(task_lines) + '\n')
 

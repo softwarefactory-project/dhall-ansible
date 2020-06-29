@@ -15,7 +15,7 @@ freeze:
 	@dhall freeze --inplace ./package.dhall --all
 
 lint:
-	@bash -c 'for f in $$(find . -name "*.dhall"); do dhall format --ascii < $$f > $$f.fmt; mv $$f.fmt $$f; done'
+	@find . -name "*.dhall" -exec dhall --ascii format --inplace {} \;
 
 doc:
 	@python3 scripts/doc.py

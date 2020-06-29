@@ -31,7 +31,7 @@
 , apt_key : Optional ./modules/apt_key.dhall
 , apt_repository : Optional ./modules/apt_repository.dhall
 , assemble : Optional ./modules/assemble.dhall
-, assert : Optional ./modules/assert.dhall
+, `assert` : Optional ./modules/assert.dhall
 , async_status : Optional ./modules/async_status.dhall
 , at : Optional ./modules/at.dhall
 , authorized_key : Optional ./modules/authorized_key.dhall

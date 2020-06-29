@@ -1,4 +1,5 @@
-{ acl = None ../types/modules/acl.dhall
+{ `assert` = None ../types/modules/assert.dhall
+, acl = None ../types/modules/acl.dhall
 , action = None Text
 , add_host = None ../types/modules/add_host.dhall
 , apt = None ../types/modules/apt.dhall
@@ -6,7 +7,6 @@
 , apt_repository = None ../types/modules/apt_repository.dhall
 , args = None ../types/args.dhall
 , assemble = None ../types/modules/assemble.dhall
-, assert = None ../types/modules/assert.dhall
 , async_status = None ../types/modules/async_status.dhall
 , async_val = None Natural
 , at = None ../types/modules/at.dhall

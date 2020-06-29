@@ -188,26 +188,36 @@ def object2require(object : typing.Dict[str, typing.Any]) -> typing.List[str]:
             return sub_all_of
     return []
 
-for module_name in module_list:
-    module = ansible[module_name]
-    module_type = []
-    if module_name in Workarounds and Workarounds[module_name].get('required'):
-        module_requires = Workarounds[module_name]['required']
-    elif module.get('required'):
-        module_requires = module['required']
-    elif module.get('allOf'):
-        module_requires = object2require(module)
-    else:
-        module_requires = []
-    attr_workarounds = Workarounds.get(module_name, {}).get('types', {})
-    for attr, attr_type in Workarounds.get(module_name, {}).get('props', module['properties'].items()):
-        if attr_type.get('$ref'):
-            attr_type = ref2json(attr_type['$ref'])
-        if attr in attr_workarounds:
-            attr_value = attr_workarounds[attr]
+
+def attr2name(attr: str) -> str:
+    # TODO: add all reserved keywords
+    reservedKeywords = {"assert", "as"}
+    if attr in reservedKeywords:
+        return "`%s`" % attr
+    return attr
+
+
+if __name__ == "__main__":
+    for module_name in module_list:
+        module = ansible[module_name]
+        module_type = []
+        if module_name in Workarounds and Workarounds[module_name].get('required'):
+            module_requires = Workarounds[module_name]['required']
+        elif module.get('required'):
+            module_requires = module['required']
+        elif module.get('allOf'):
+            module_requires = object2require(module)
         else:
-            attr_value = json2dhall(attr_type['type'], attr_type.get('items', {}).get('type', ''))
-        optional = 'Optional ' if attr not in module_requires else ''
-        module_type.append(attr + ' : ' + optional + attr_value)
-    with(open('types/modules/' + module_name + '.dhall', 'w')) as of:
-        of.write("{" + ', '.join(sorted(module_type)) + "}")
+            module_requires = []
+        attr_workarounds = Workarounds.get(module_name, {}).get('types', {})
+        for attr, attr_type in Workarounds.get(module_name, {}).get('props', module['properties'].items()):
+            if attr_type.get('$ref'):
+                attr_type = ref2json(attr_type['$ref'])
+            if attr in attr_workarounds:
+                attr_value = attr_workarounds[attr]
+            else:
+                attr_value = json2dhall(attr_type['type'], attr_type.get('items', {}).get('type', ''))
+            optional = 'Optional ' if attr not in module_requires else ''
+            module_type.append(attr2name(attr) + ' : ' + optional + attr_value)
+        with(open('types/modules/' + module_name + '.dhall', 'w')) as of:
+            of.write("{" + ', '.join(sorted(module_type)) + "}")
