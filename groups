@@ -1,7 +1,7 @@
 # UUID Group Name
 global:Registered-Users	Registered Users
-8c4bdae84edd1b4972d55ea3da1c851cbc629957	sf-core
-30a730c312178afc788b70dee3da37fa0b2d4716	sf-ptl
-9562193e1f1647ee1c2004b4fb7996e84ae7e717	Non-Interactive Users
 global:Anonymous-Users	Anonymous Users
+8c4bdae84edd1b4972d55ea3da1c851cbc629957	sf-core
+9562193e1f1647ee1c2004b4fb7996e84ae7e717	Non-Interactive Users
 3e9524ec5161dc0bc28a7343d1c54bb9ae4d6d35	Administrators
+30a730c312178afc788b70dee3da37fa0b2d4716	sf-ptl
