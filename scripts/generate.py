@@ -13,11 +13,11 @@
 # License for the specific language governing permissions and limitations
 # under the License.
 
-# First download: https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json//ansible-stable-2.9.json
+# First download: https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json//ansible-role-2.9.json
 import json
 import typing
 
-ansible = json.loads(open("ansible-stable-2.9.json").read())['items']['anyOf'][-1]['properties']
+ansible = json.loads(open("ansible-role-2.9.json").read())['items']['anyOf'][-1]['properties']
 
 # Then update the list from https://docs.ansible.com/ansible/latest/modules/core_maintained.html
 module_list = (
