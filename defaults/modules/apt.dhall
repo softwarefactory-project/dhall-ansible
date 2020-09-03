@@ -1,7 +1,7 @@
 { allow_unauthenticated = None Bool
 , autoclean = None Bool
 , autoremove = None Bool
-, cache_valid_time = None Text
+, cache_valid_time = None Natural
 , deb = None Text
 , default_release = None Text
 , dpkg_options = None Text
@@ -9,10 +9,10 @@
 , force_apt_get = None Bool
 , install-recommends = None Bool
 , install_recommends = None Bool
-, name = None Text
+, name = None (List Text)
 , only_upgrade = None Bool
-, package = None Text
-, pkg = None Text
+, package = None (List Text)
+, pkg = None (List Text)
 , policy_rc_d = None Natural
 , purge = None Bool
 , state = None Text

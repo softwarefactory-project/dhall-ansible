@@ -3,7 +3,7 @@
 , AddHost =
     ./schemas/modules/add_host.dhall sha256:62c4948a85769d0826225e5382abd054a4cbc72d060b8a8eced862d1e8e8e901
 , Apt =
-    ./schemas/modules/apt.dhall sha256:ef455f7d7e3e134d0943d4e5c25307bad3606017e9723881256bc936e8170571
+    ./schemas/modules/apt.dhall sha256:d9331a47a2cb7bf9e7caad466e2a3126c8ae8e5176ed0b28ceddc88ae7469bdd
 , AptKey =
     ./schemas/modules/apt_key.dhall sha256:2475077618c2e1d402dbbe712c6b234c3b1bdae8fd93879b43467f62253c36c9
 , AptRepository =
@@ -119,7 +119,7 @@
 , Pip =
     ./schemas/modules/pip.dhall sha256:51b3cc676edd303581ff5fdc876839c26454b9dbc16c1083af3e419cab4ea960
 , Play =
-    ./schemas/play.dhall sha256:6ca94f8f91ad7c331dd87f4ccd0580766aba3ccf614158ae610eff6803774a01
+    ./schemas/play.dhall sha256:c2893d27dbedc7de2541f12a8f84e06f81fc7d1d1fd61bef29666b979a628d3e
 , RpmKey =
     ./schemas/modules/rpm_key.dhall sha256:dbba053f922e9bd0c8eed500c6dcf4cea6299f6b80a4123296ffffbd51129ef9
 , S3Bucket =
@@ -147,7 +147,7 @@
 , Systemd =
     ./schemas/modules/systemd.dhall sha256:0a4a9c4de96d1fe4dfaef759972fef703b9307998611f956ece460fbf6d6b561
 , Task =
-    ./schemas/task.dhall sha256:3590511072016e56cf1f61f851df6d63abf6b109b3a08674dc2ea6c48c5b14df
+    ./schemas/task.dhall sha256:d85f278a145a65bebd45e5cc4234db91900e5d11a78469f905a156ae6206cb91
 , Template =
     ./schemas/modules/template.dhall sha256:d3b72f75497c95d35c5eff2a80cf84f8c11398f249d5bef10be2f72213aaa8a9
 , Unarchive =
@@ -161,7 +161,7 @@
 , WaitForConnection =
     ./schemas/modules/wait_for_connection.dhall sha256:d38d76a492a01f398657d41cc7c5d541d0a9716bee7970fa598ee566fac9f7cb
 , Yum =
-    ./schemas/modules/yum.dhall sha256:ecfa5aa037051f8f9ed0aed0783f08c5b010f5052ba54c1da0644500406e0cf3
+    ./schemas/modules/yum.dhall sha256:81853d061e7887a9cadeed4a10fc2a27c1a288aaec8d5efba6f0ced35fcad5c1
 , YumRepository =
     ./schemas/modules/yum_repository.dhall sha256:d20a3cdb69ba5fed7514662f06a08878c05dcdd5ebdde31b5a530855136e047a
 }
