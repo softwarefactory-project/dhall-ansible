@@ -20,7 +20,13 @@ from pathlib import Path
 from textwrap import dedent
 from typing import Any, Iterator, List
 
-from generate import attr2name
+
+def attr2name(attr: str) -> str:
+    # TODO: add all reserved keywords
+    reservedKeywords = {"assert", "as"}
+    if attr in reservedKeywords:
+        return "`%s`" % attr
+    return attr
 
 
 def write(dest: Path, content: str) -> None:

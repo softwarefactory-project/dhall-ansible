@@ -16,6 +16,7 @@
 # First download: https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json//ansible-stable-2.9.json
 import json
 import typing
+from update import attr2name
 
 ansible = json.loads(open("ansible-stable-2.9.json").read())['items']['anyOf'][-1]['properties']
 
@@ -187,14 +188,6 @@ def object2require(object : typing.Dict[str, typing.Any]) -> typing.List[str]:
         if sub_all_of:
             return sub_all_of
     return []
-
-
-def attr2name(attr: str) -> str:
-    # TODO: add all reserved keywords
-    reservedKeywords = {"assert", "as"}
-    if attr in reservedKeywords:
-        return "`%s`" % attr
-    return attr
 
 
 if __name__ == "__main__":

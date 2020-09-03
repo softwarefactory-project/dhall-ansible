@@ -1,0 +1,9 @@
+- project:
+    check: &ci
+      jobs:
+        - dhall-diff:
+            nodeset:
+              nodes:
+                - name: container
+                  label: pod-dhall-1-33
+    gate: *ci
