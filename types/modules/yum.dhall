@@ -17,7 +17,7 @@
 , list : Optional Text
 , lock_timeout : Optional Natural
 , name : List Text
-, pkg : Optional Text
+, pkg : Optional (List Text)
 , releasever : Optional Text
 , security : Optional Bool
 , skip_broken : Optional Bool
