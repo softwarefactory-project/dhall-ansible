@@ -77,6 +77,7 @@
 , ping = None ../types/modules/ping.dhall
 , pip = None ../types/modules/pip.dhall
 , poll = None Natural
+, reboot = None ../types/modules/reboot.dhall
 , register = None Text
 , retries = None Natural
 , rpm_key = None ../types/modules/rpm_key.dhall
