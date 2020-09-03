@@ -83,6 +83,7 @@
 , pause : Optional ./modules/pause.dhall
 , ping : Optional ./modules/ping.dhall
 , pip : Optional ./modules/pip.dhall
+, reboot : Optional ./modules/reboot.dhall
 , rpm_key : Optional ./modules/rpm_key.dhall
 , s3_bucket : Optional ./modules/s3_bucket.dhall
 , seboolean : Optional ./modules/seboolean.dhall

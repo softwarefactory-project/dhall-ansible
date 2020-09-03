@@ -105,6 +105,7 @@ module_list = (
     "luks_device",
     "mount",
     "ping",
+    "reboot",
     "seboolean",
     "selinux",
     "service",
