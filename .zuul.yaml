@@ -1,0 +1,7 @@
+- project:
+    check:
+      jobs:
+        - dhall-diff
+    gate:
+      jobs:
+        - dhall-diff
