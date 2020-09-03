@@ -16,7 +16,7 @@
 , installroot = None Text
 , list = None Text
 , lock_timeout = None Natural
-, pkg = None Text
+, pkg = None (List Text)
 , releasever = None Text
 , security = None Bool
 , skip_broken = None Bool
