@@ -9,4 +9,6 @@
 , remote_src = None Bool
 , src = None Text
 , thirsty = None Bool
+, owner = None Text
+, group = None Text
 }
