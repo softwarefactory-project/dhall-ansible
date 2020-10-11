@@ -27,7 +27,7 @@
 , Cloudformation =
     ./schemas/modules/cloudformation.dhall sha256:52c4bbb74eaeaf67100d5f50dc16dfb792533742eec7e57485815c2e56c9afb5
 , Copy =
-    ./schemas/modules/copy.dhall sha256:84ef8055b720404c67b602733571aa8ed6b10c609439f7635260ba81862e7c09
+    ./schemas/modules/copy.dhall sha256:97f277c0fe540a7448315ac3cc5927c5ba818cad5249ea507d6596cf036aab11
 , Cron =
     ./schemas/modules/cron.dhall sha256:021048a23a56dedfc5eb681754b72ea9a431395aab0dafcb7f646ba85d383f51
 , Debconf =
@@ -119,7 +119,7 @@
 , Pip =
     ./schemas/modules/pip.dhall sha256:51b3cc676edd303581ff5fdc876839c26454b9dbc16c1083af3e419cab4ea960
 , Play =
-    ./schemas/play.dhall sha256:2f6d9f1eae3b9cd456ed6de48854857cfcade266ad5ae7e46691ed7fe41d7505
+    ./schemas/play.dhall sha256:7ff7b8838e25d1e151714bc78e7bc1a7da417211e19afa0bf801c3f5a0e59a98
 , Reboot =
     ./schemas/modules/reboot.dhall sha256:8954cc5addc72366a4642f241711e68c4d5d73f82b53cc65420e89fb93d0aa28
 , RpmKey =
@@ -149,7 +149,7 @@
 , Systemd =
     ./schemas/modules/systemd.dhall sha256:0a4a9c4de96d1fe4dfaef759972fef703b9307998611f956ece460fbf6d6b561
 , Task =
-    ./schemas/task.dhall sha256:fc325917009426c5e9d178e946b15cb4837e55cdfe87c1cc21b5d6abe8ac0389
+    ./schemas/task.dhall sha256:715dd9d0e4f4530395de32cae6a90cbc8d7d7df295bc1ca8488dab9a1a35a876
 , Template =
     ./schemas/modules/template.dhall sha256:d3b72f75497c95d35c5eff2a80cf84f8c11398f249d5bef10be2f72213aaa8a9
 , Unarchive =

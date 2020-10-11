@@ -10,4 +10,6 @@
 , remote_src : Optional Bool
 , src : Optional Text
 , thirsty : Optional Bool
+, owner : Optional Text
+, group : Optional Text
 }
