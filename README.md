@@ -65,7 +65,44 @@ in  [ Ansible.Play::{
 
 ```
 
+## Extend
+
+To use custom modules, the Task type may be extended with the [//\\ operator][type-operator]:
+
+```dhall
+{- ./examples/custom.dhall -}
+let Ansible = ../package.dhall
+
+let MyModule = { Type = { attribute : Bool }, default = {=} }
+
+let Task =
+      { Type = Ansible.Task.Type //\\ { my-module : Optional MyModule.Type }
+      , default = Ansible.Task.default // { my-module = None MyModule.Type }
+      }
+
+in  [ { hosts = "localhost"
+      , tasks =
+        [ Task::{
+          , name = Some "my-module usage"
+          , my-module = Some MyModule::{ attribute = True }
+          }
+        ]
+      }
+    ]
+
+```
+
+```yaml
+# dhall-to-yaml --file examples/custom.dhall
+- hosts: localhost
+  tasks:
+    - my-module:
+        attribute: true
+      name: my-module usage
+
+```
 
 [dhall-lang]: https://dhall-lang.org
 [Ansible]: https://ansible.com
 [dhall-kubernetes]: https://github.com/dhall-lang/dhall-kubernetes
+[type-operator]: https://docs.dhall-lang.org/references/Built-in-types.html#id70
