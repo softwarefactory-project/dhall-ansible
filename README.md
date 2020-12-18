@@ -102,6 +102,14 @@ in  [ { hosts = "localhost"
 
 ```
 
+## Changes
+
+Frozen package are available in the tag commit.
+
+### 0.1.0
+
+- Initial release
+
 [dhall-lang]: https://dhall-lang.org
 [Ansible]: https://ansible.com
 [dhall-kubernetes]: https://github.com/dhall-lang/dhall-kubernetes
