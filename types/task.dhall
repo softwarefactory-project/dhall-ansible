@@ -19,7 +19,7 @@
 , retries : Optional Natural
 , until : Optional Text
 , register : Optional Text
-, ignore_errors : Optional Bool
+, ignore_errors : Optional Text
 , failed_when : Optional Text
 , changed_when : Optional Text
 , command : Optional Text

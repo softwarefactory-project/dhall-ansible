@@ -119,7 +119,7 @@
 , Pip =
     ./schemas/modules/pip.dhall sha256:51b3cc676edd303581ff5fdc876839c26454b9dbc16c1083af3e419cab4ea960
 , Play =
-    ./schemas/play.dhall sha256:7ff7b8838e25d1e151714bc78e7bc1a7da417211e19afa0bf801c3f5a0e59a98
+    ./schemas/play.dhall sha256:bef753f0519fb51321f61eee2e826095ebb1b101eb6b61968fae8cacec8418ac
 , Reboot =
     ./schemas/modules/reboot.dhall sha256:8954cc5addc72366a4642f241711e68c4d5d73f82b53cc65420e89fb93d0aa28
 , RpmKey =
@@ -149,7 +149,7 @@
 , Systemd =
     ./schemas/modules/systemd.dhall sha256:0a4a9c4de96d1fe4dfaef759972fef703b9307998611f956ece460fbf6d6b561
 , Task =
-    ./schemas/task.dhall sha256:715dd9d0e4f4530395de32cae6a90cbc8d7d7df295bc1ca8488dab9a1a35a876
+    ./schemas/task.dhall sha256:50f8e2a744c3af380171c1f0fddd0e907219b98ebb3e7a6713c95749c0665e7a
 , Template =
     ./schemas/modules/template.dhall sha256:d3b72f75497c95d35c5eff2a80cf84f8c11398f249d5bef10be2f72213aaa8a9
 , Unarchive =

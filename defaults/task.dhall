@@ -44,7 +44,7 @@
 , git = None ../types/modules/git.dhall
 , group = None ../types/modules/group.dhall
 , group_by = None ../types/modules/group_by.dhall
-, ignore_errors = None Bool
+, ignore_errors = None Text
 , import_playbook = None ../types/modules/import_playbook.dhall
 , import_role = None ../types/modules/import_role.dhall
 , import_tasks = None ../types/modules/import_tasks.dhall
