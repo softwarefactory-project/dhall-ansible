@@ -1,0 +1,1 @@
+< absent | build-dep | latest | present | fixed >

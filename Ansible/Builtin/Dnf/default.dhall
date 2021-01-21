@@ -1,0 +1,27 @@
+{ enablerepo = None Text
+, allow_downgrade = None Bool
+, autoremove = None Bool
+, skip_broken = None Bool
+, security = None Bool
+, exclude = None Text
+, install_weak_deps = None Bool
+, conf_file = None Text
+, disable_plugin = None Text
+, update_only = None Bool
+, installroot = None Text
+, enable_plugin = None Text
+, download_dir = None Text
+, allowerasing = None Bool
+, disable_excludes = None Text
+, releasever = None Text
+, update_cache = None Bool
+, list = None Text
+, disable_gpg_check = None Bool
+, validate_certs = None Bool
+, state = None ./state.dhall
+, bugfix = None Bool
+, download_only = None Bool
+, lock_timeout = None Natural
+, install_repoquery = None Bool
+, disablerepo = None Text
+}

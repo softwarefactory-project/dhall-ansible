@@ -1,0 +1,1 @@
+{ strategy = None ./strategy.dhall, manager = None (List Text) }
