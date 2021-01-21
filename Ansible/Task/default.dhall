@@ -1,0 +1,27 @@
+{ action = None Text
+, async_val = None Natural
+, become = None Bool
+, become_flags = None Text
+, become_method = None Text
+, become_user = None Text
+, changed_when = None Text
+, command = None Text
+, delay = None Natural
+, delegate_facts = None Bool
+, delegate_to = None Text
+, failed_when = None Text
+, ignore_errors = None Bool
+, listen = None Text
+, loop = None Text
+, loop_control = None ./loop_control.dhall
+, name = None Text
+, no_log = None Bool
+, notify = None (List Text)
+, poll = None Natural
+, register = None Text
+, retries = None Natural
+, set_fact = None (../Vars.dhall).Type
+, until = None Text
+, vars = None (../Vars.dhall).Type
+, when = None Text
+}
