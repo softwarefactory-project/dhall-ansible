@@ -1,0 +1,1 @@
+< never | `read-only:past` | `read-only:present` | `read-only:future` >

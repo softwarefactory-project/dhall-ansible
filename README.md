@@ -9,38 +9,26 @@ why you might want to do this.
 
 ## Example
 
+A basic playbook using builtin modules:
+
 ```dhall
 -- ./examples/demo.dhall
-let Ansible = ../package.dhall in [ Ansible.Play::{ hosts = "localhost" } ]
-
-```
-
-```yaml
-# dhall-to-yaml --file examples/demo.dhall
-
-- hosts: localhost
-
-```
-
-## Extend
-
-To use custom modules, the Task type may be extended with the [//\\ operator][type-operator]:
-
-```dhall
 let Ansible = ../package.dhall
 
-let MyModule = { Type = { attribute : Bool }, default = {=} }
-
-let Task =
-      { Type = Ansible.Task.Type //\\ { my-module : Optional MyModule.Type }
-      , default = Ansible.Task.default // { my-module = None MyModule.Type }
-      }
-
-in  [ { hosts = "localhost"
-      , tasks =
-        [ Task::{
-          , name = Some "my-module usage"
-          , my-module = Some MyModule::{ attribute = True }
+in  [ Ansible.Play::{
+      , hosts = "localhost"
+      , vars = Some (Ansible.Vars.mapText (toMap { var_name = "var_value" }))
+      , tasks = Some
+        [ Ansible.Task::{
+          , debug = Some Ansible.Debug::{ msg = Some "Hello world" }
+          }
+        , Ansible.Task::{
+          , name = Some "Installing package"
+          , become = Some True
+          , package = Some Ansible.Package::{
+            , name = "emacs-nox"
+            , state = "present"
+            }
           }
         ]
       }
@@ -49,12 +37,118 @@ in  [ { hosts = "localhost"
 ```
 
 ```yaml
-# # dhall-to-yaml --file examples/custom.dhall
+# dhall-to-yaml --file examples/demo.dhall
+
 - hosts: localhost
   tasks:
-    - my-module:
-        attribute: true
-      name: my-module usage
+    - debug:
+        msg: Hello world
+    - become: true
+      name: Installing package
+      package:
+        name: emacs-nox
+        state: present
+  vars:
+    var_name: var_value
+
+```
+
+To use collection, a custom Ansible package can be defined:
+
+```dhall
+-- ./examples/ansible-posix.dhall
+let Base = ../package.dhall
+
+let Posix =
+      https://softwarefactory-project.io/cgit/software-factory/dhall-ansible-collection-ansible-posix/plain/package.dhall?h=0.1.0 sha256:c1b127b528be28294629ee1f8b0d8fc951c7282caaffab6ca675f931ea1450c7
+
+let --| Here the task type is extended with the Posix collection
+    Task =
+      { Type = Base.BaseTask.Type //\\ Posix.Task.Type
+      , default = Base.BaseTask.default // Posix.Task.default
+      }
+
+let --| The new task type can be added to the Play too
+    Play =
+      { Type = Base.BasePlay.Type //\\ { tasks : List Task.Type }
+      , default = Base.BasePlay.default
+      }
+
+in  Base // { Task, Play, Posix }
+
+```
+
+And a playbook can be defined as follow:
+
+```dhall
+-- ./examples/posix.dhall
+let Ansible = ./ansible-posix.dhall
+
+in  [ Ansible.Play::{
+      , hosts = "localhost"
+      , tasks =
+        [ Ansible.Task::{
+          , name = Some "Synchronize demo"
+          , `ansible.posix.synchronize` = Some Ansible.Posix.Synchronize::{
+            , src = "/tmp/test"
+            , dest = "/tmp/dest"
+            }
+          }
+        ]
+      }
+    ]
+
+```
+
+```yaml
+# dhall-to-yaml --file examples/posix.dhall
+
+- hosts: localhost
+  tasks:
+    - ansible.posix.synchronize:
+        dest: /tmp/dest
+        src: /tmp/test
+      name: Synchronize demo
+
+```
+
+Here is a custom package including the ansible.posix and openstack.cloud collection:
+
+```dhall
+-- ./examples/ansible-extended.dhall
+let Base = ../package.dhall
+
+let -- TODO: replace with tagged URL
+    Posix =
+      ../../dhall-ansible-collection-ansible.posix/package.dhall
+
+let Openstack = ../../dhall-ansible-collection-openstack.cloud/package.dhall
+
+let Task =
+      { Type = Base.Task.Type //\\ Posix.Task.Type //\\ Openstack.Task.Type
+      , default =
+          Base.Task.default // Posix.Task.default // Openstack.Task.default
+      }
+
+let Play =
+      { Type =
+              Base.BasePlay.Type
+          //\\  { tasks : Optional (List Task.Type)
+                , pre_tasks : Optional (List Task.Type)
+                , post_tasks : Optional (List Task.Type)
+                , handlers : Optional (List Task.Type)
+                }
+      , default =
+              Base.BasePlay.default
+          //  { tasks = None (List Task.Type)
+              , pre_tasks = None (List Task.Type)
+              , post_tasks = None (List Task.Type)
+              , handlers = None (List Task.Type)
+              }
+      }
+
+in  Base // { Task, Play, Posix }
+
 ```
 
 ## Changes

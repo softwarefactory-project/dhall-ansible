@@ -1,0 +1,1 @@
+< absent | drained | present | started | stopped >

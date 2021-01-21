@@ -1,0 +1,1 @@
+{ aggregate = None Bool, per_host = None Bool }

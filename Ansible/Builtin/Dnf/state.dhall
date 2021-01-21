@@ -1,0 +1,1 @@
+< absent | present | installed | removed | latest >

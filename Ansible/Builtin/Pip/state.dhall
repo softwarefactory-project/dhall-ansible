@@ -1,0 +1,1 @@
+< absent | forcereinstall | latest | present >
