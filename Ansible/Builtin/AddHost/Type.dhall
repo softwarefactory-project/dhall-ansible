@@ -1,0 +1,1 @@
+{ groups : Optional (List Text), name : Text }

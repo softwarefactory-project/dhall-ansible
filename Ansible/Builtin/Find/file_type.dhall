@@ -1,0 +1,1 @@
+< any | directory | file | link >

@@ -3,16 +3,37 @@
 --
 -- Learn more at: https://softwarefactory-project.io/cgit/software-factory/shake-factory/tree/README.md
 
+import Control.Monad
+import Data.List (isPrefixOf)
 import Development.Shake
 import ShakeFactory
 import ShakeFactory.Dhall
 
+builtinLinks :: Action ()
+builtinLinks = do
+  builtins <- filter (/= "Task") <$> getDirectoryDirs "Ansible/Builtin"
+  mapM_ (\fp -> writeFile' ("Ansible/" <> fp <> ".dhall") ("./Builtin/" <> fp <> "/package.dhall")) builtins
+
+test :: Rules ()
+test = phony "test" $ do
+  testCases <- getDirectoryFiles "tests" ["*"]
+  mapM_ testLoad testCases
+  where
+    testLoad :: String -> Action String
+    testLoad testCase = do
+      Stdout s <- cmd "yaml-to-dhall" ["List (./package.dhall).Play.Type"] "--file" ("tests/" <> testCase)
+      pure s
+
+main :: IO ()
 main = shakeMain $ do
-  want ["README.md", "package.dhall"]
+  want ["README.md", "test", "package.dhall", "Ansible/BaseTask/default.dhall", "Ansible/BasePlay/default.dhall", "builtin"]
+  phony "builtin" builtinLinks
   "README.md" %> dhallReadmeAction
   "package.dhall" %> dhallTopLevelPackageAction "./Ansible/package.dhall"
-  "//package.dhall" %> dhallPackageAction
-  "//default.dhall" %> dhallDefaultAction
+  "//package.dhall" %> \out -> unless ("../" `isPrefixOf` out) (dhallPackageAction out)
+  "Ansible/BaseTask/default.dhall" %> dhallDefaultAction
+  "Ansible/BasePlay/default.dhall" %> dhallDefaultAction
   dhallDocsRules "dhall-ansible"
   dhallReleaseRules "./Ansible/package.dhall"
   cleanRules
+  test

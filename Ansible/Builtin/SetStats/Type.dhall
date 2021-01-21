@@ -1,0 +1,1 @@
+{ per_host : Optional Bool, data : ../JSON.dhall, aggregate : Optional Bool }
