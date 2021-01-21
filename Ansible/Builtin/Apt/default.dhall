@@ -1,0 +1,20 @@
+{ autoremove = None Bool
+, install_recommends = None Bool
+, force_apt_get = None Bool
+, update_cache_retries = None Natural
+, purge = None Bool
+, policy_rc_d = None Natural
+, autoclean = None Bool
+, dpkg_options = None Text
+, cache_valid_time = None Text
+, name = None (List Text)
+, update_cache_retry_max_delay = None Natural
+, allow_unauthenticated = None Bool
+, deb = None Text
+, only_upgrade = None Bool
+, upgrade = None ./upgrade.dhall
+, default_release = None Text
+, force = None Bool
+, update_cache = None Bool
+, state = None ./state.dhall
+}

@@ -1,0 +1,22 @@
+{ follow = None Bool
+, validate = None Text
+, setype = None Text
+, unsafe_writes = None Bool
+, variable_start_string = None Text
+, block_end_string = None Text
+, selevel = None Text
+, attributes = None Text
+, seuser = None Text
+, trim_blocks = None Bool
+, block_start_string = None Text
+, variable_end_string = None Text
+, owner = None Text
+, backup = None Bool
+, output_encoding = None Text
+, mode = None Text
+, lstrip_blocks = None Bool
+, force = None Bool
+, serole = None Text
+, newline_sequence = None ./newline_sequence.dhall
+, group = None Text
+}

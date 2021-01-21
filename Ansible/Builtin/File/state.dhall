@@ -1,0 +1,1 @@
+< absent | directory | file | hard | link | touch >

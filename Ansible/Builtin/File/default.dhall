@@ -1,0 +1,19 @@
+{ follow = None Bool
+, setype = None Text
+, unsafe_writes = None Bool
+, selevel = None Text
+, src = None Text
+, attributes = None Text
+, seuser = None Text
+, modification_time = None Text
+, owner = None Text
+, access_time = None Text
+, mode = None Text
+, modification_time_format = None Text
+, force = None Bool
+, recurse = None Bool
+, access_time_format = None Text
+, serole = None Text
+, group = None Text
+, state = None ./state.dhall
+}
