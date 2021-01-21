@@ -1,0 +1,21 @@
+{ attributes = None Text
+, backrefs = None Bool
+, backup = None Bool
+, create = None Bool
+, firstmatch = None Bool
+, group = None Text
+, insertafter = None ./insertafter.dhall
+, insertbefore = None ./insertbefore.dhall
+, line = None Text
+, mode = None Text
+, others = None Text
+, owner = None Text
+, regexp = None Text
+, selevel = None Text
+, serole = None Text
+, setype = None Text
+, seuser = None Text
+, state = None ./state.dhall
+, unsafe_writes = None Bool
+, validate = None Text
+}

@@ -1,0 +1,22 @@
+{ accept_hostkey = None Bool
+, archive = None Text
+, archive_prefix = None Text
+, bare = None Bool
+, clone = None Bool
+, depth = None Text
+, executable = None Text
+, force = None Bool
+, gpg_whitelist = None (List Text)
+, key_file = None Text
+, recursive = None Bool
+, reference = None Text
+, refspec = None Text
+, remote = None Text
+, separate_git_dir = None Text
+, ssh_opts = None Text
+, track_submodules = None Bool
+, umask = None Text
+, update = None Bool
+, verify_commit = None Bool
+, version = None Text
+}

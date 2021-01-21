@@ -1,0 +1,42 @@
+{ wait : Optional Text
+, uid_owner : Optional Text
+, to_source : Optional Text
+, to_ports : Optional Text
+, to_destination : Optional Text
+, tcp_flags : Optional ../JSON.dhall
+, table : Optional ./table.dhall
+, syn : Optional ./syn.dhall
+, state : Optional ./state.dhall
+, src_range : Optional Text
+, source_port : Optional Text
+, source : Optional Text
+, set_dscp_mark_class : Optional Text
+, set_dscp_mark : Optional Text
+, set_counters : Optional Text
+, rule_num : Optional Text
+, reject_with : Optional Text
+, protocol : Optional Text
+, policy : Optional ./policy.dhall
+, out_interface : Optional Text
+, match : Optional (List Text)
+, log_prefix : Optional Text
+, log_level : Optional ./log_level.dhall
+, limit_burst : Optional Text
+, limit : Optional Text
+, jump : Optional Text
+, ip_version : Optional ./ip_version.dhall
+, in_interface : Optional Text
+, icmp_type : Optional Text
+, goto : Optional Text
+, gid_owner : Optional Text
+, gateway : Optional Text
+, fragment : Optional Text
+, flush : Optional Bool
+, dst_range : Optional Text
+, destination_port : Optional Text
+, destination : Optional Text
+, ctstate : Optional (List Text)
+, comment : Optional Text
+, chain : Optional Text
+, action : Optional ./action.dhall
+}

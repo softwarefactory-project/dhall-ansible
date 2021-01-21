@@ -1,0 +1,1 @@
+< auto | yum | yum4 | dnf >
