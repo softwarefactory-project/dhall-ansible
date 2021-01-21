@@ -1,0 +1,34 @@
+cabal-version:       >=1.10
+name:                ansible-collection-to-dhall
+version:             0.1.0.0
+author:              Tristan de Cacqueray
+maintainer:          tdecacqu@redhat.com
+build-type:          Simple
+extra-source-files:  CHANGELOG.md, README.md
+
+executable ansible-collection-to-dhall
+  main-is:             Main.hs
+  ghc-options:         -Wall
+                       -Wcompat
+                       -Widentities
+                       -Wincomplete-uni-patterns
+                       -Wincomplete-record-updates
+                       -Wredundant-constraints
+                       -fhide-source-paths
+                       -Wmissing-export-lists
+                       -Wpartial-fields
+                       -Wunused-packages
+  build-depends:       base >=4.14 && <4.15
+                     , aeson
+                     , containers
+                     , unordered-containers
+                     , dhall
+                     , relude
+                     , casing
+                     , directory
+                     , filepath
+                     , typed-process
+                     , optparse-generic
+                     , text
+                     , vector
+  default-language:    Haskell2010

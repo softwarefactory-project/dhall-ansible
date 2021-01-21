@@ -1,0 +1,1 @@
+{ jid : Text, mode : Optional ./mode.dhall }

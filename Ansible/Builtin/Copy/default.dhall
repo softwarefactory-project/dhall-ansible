@@ -1,0 +1,21 @@
+{ attributes = None Text
+, backup = None Bool
+, checksum = None Text
+, content = None Text
+, decrypt = None Bool
+, directory_mode = None Text
+, follow = None Bool
+, force = None Bool
+, group = None Text
+, local_follow = None Bool
+, mode = None Text
+, owner = None Text
+, remote_src = None Bool
+, selevel = None Text
+, serole = None Text
+, setype = None Text
+, seuser = None Text
+, src = None Text
+, unsafe_writes = None Bool
+, validate = None Text
+}

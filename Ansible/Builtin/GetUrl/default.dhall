@@ -1,0 +1,25 @@
+{ attributes = None Text
+, backup = None Bool
+, checksum = None Text
+, client_cert = None Text
+, client_key = None Text
+, force = None Bool
+, force_basic_auth = None Bool
+, group = None Text
+, headers = None ../JSON.dhall
+, http_agent = None Text
+, mode = None Text
+, owner = None Text
+, selevel = None Text
+, serole = None Text
+, setype = None Text
+, seuser = None Text
+, sha256sum = None Text
+, timeout = None Natural
+, tmp_dest = None Text
+, unsafe_writes = None Bool
+, url_password = None Text
+, url_username = None Text
+, use_proxy = None Bool
+, validate_certs = None Bool
+}
