@@ -1,3 +1,5 @@
-{ Type = ./BaseTask/Type.dhall //\\ ./Builtin/Task/Type.dhall
-, default = ./BaseTask/default.dhall // ./Builtin/Task/default.dhall
-}
+let Task = ./BlockTask.dhall
+
+in  { Type = Task.Type //\\ (./mkBlock.dhall Task.Type).Type
+    , default = Task.default // (./mkBlock.dhall Task.Type).default
+    }

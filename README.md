@@ -30,6 +30,20 @@ in  [ Ansible.Play::{
             , state = "present"
             }
           }
+        , Ansible.Task::{
+          , block = Some
+            [ Ansible.BlockTask::{
+              , name = Some "Failing Block task"
+              , fail = Some Ansible.Fail::{ msg = Some "oops" }
+              }
+            ]
+          , rescue = Some
+            [ Ansible.BlockTask::{
+              , name = Some "Rescue task"
+              , debug = Some Ansible.Debug::{ msg = Some "rescued" }
+              }
+            ]
+          }
         ]
       }
     ]
@@ -48,6 +62,14 @@ in  [ Ansible.Play::{
       package:
         name: emacs-nox
         state: present
+    - block:
+        - fail:
+            msg: oops
+          name: Failing Block task
+      rescue:
+        - debug:
+            msg: rescued
+          name: Rescue task
   vars:
     var_name: var_value
 
@@ -124,10 +146,15 @@ let Posix =
 let Openstack =
       https://softwarefactory-project.io/cgit/software-factory/dhall-ansible-collection-openstack-cloud/plain/package.dhall?h=0.1.0 sha256:ced909353da20eb8d8a088c59a91f822ed2e069923a7fd2e901b55398343f3fe
 
-let Task =
+let BlockTask =
       { Type = Base.Task.Type //\\ Posix.Task.Type //\\ Openstack.Task.Type
       , default =
           Base.Task.default // Posix.Task.default // Openstack.Task.default
+      }
+
+let Task =
+      { Type = Task.Type //\\ Ansible.mkBlock Task.Type
+      , default = Task.default // Ansible.mkBlock Task.Type
       }
 
 let Play =
@@ -158,6 +185,8 @@ Frozen packages are available in the tag commit.
 ### 0.2.0
 
 - Major refactor to support Ansible Collections
+- Change vars type to JSON/Type
+- Add block support
 
 ### 0.1.0
 

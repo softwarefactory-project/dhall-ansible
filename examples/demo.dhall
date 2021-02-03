@@ -15,6 +15,20 @@ in  [ Ansible.Play::{
             , state = "present"
             }
           }
+        , Ansible.Task::{
+          , block = Some
+            [ Ansible.BlockTask::{
+              , name = Some "Failing Block task"
+              , fail = Some Ansible.Fail::{ msg = Some "oops" }
+              }
+            ]
+          , rescue = Some
+            [ Ansible.BlockTask::{
+              , name = Some "Rescue task"
+              , debug = Some Ansible.Debug::{ msg = Some "rescued" }
+              }
+            ]
+          }
         ]
       }
     ]
