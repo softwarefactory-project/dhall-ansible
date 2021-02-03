@@ -296,7 +296,7 @@ doCollection root (name, modules) = do
       ODict -> True
       _ -> False
     rootName = toText $ Prelude.last (splitDirectories root)
-    colName = Prelude.last (Text.split (== '-') (toText rootName))
+    colName = Text.drop 1 $ L.foldl (\acc i -> acc <> "." <> i) "" $ Prelude.drop 3 (Text.split (== '-') rootName)
     colUrl = Text.replace "." "/" colName
     write fp txt = do
       writeFileText (root </> fp) (Text.unlines txt)
