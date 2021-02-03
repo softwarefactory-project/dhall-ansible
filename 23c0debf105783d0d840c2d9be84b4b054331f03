@@ -1,0 +1,8 @@
+Code-Review+2: Tristan de Cacqueray <tdecacqu@redhat.com>
+Workflow+1: Tristan de Cacqueray <tdecacqu@redhat.com>
+Verified+2: Zuul CI <zuul@softwarefactory-project.io>
+Submitted-by: Zuul CI <zuul@softwarefactory-project.io>
+Submitted-at: Wed, 03 Feb 2021 22:57:20 +0000
+Reviewed-on: https://softwarefactory-project.io/r/20869
+Project: software-factory/dhall-ansible
+Branch: refs/heads/master
