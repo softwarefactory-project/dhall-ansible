@@ -182,6 +182,10 @@ in  Base // { Task, Play, Posix }
 
 Frozen packages are available in the tag commit.
 
+### 0.2.1
+
+- Import Zuul.Vars locally
+
 ### 0.2.0
 
 - Major refactor to support Ansible Collections

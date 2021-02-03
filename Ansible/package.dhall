@@ -64,7 +64,6 @@
 , Unarchive = ./Unarchive.dhall
 , Uri = ./Uri.dhall
 , User = ./User.dhall
-, Vars = ./Vars.dhall
 , WaitFor = ./WaitFor.dhall
 , WaitForConnection = ./WaitForConnection.dhall
 , Yum = ./Yum.dhall
@@ -73,4 +72,5 @@
 , BasePlay = ./BasePlay/package.dhall
 , BaseTask = ./BaseTask/package.dhall
 , Builtin = ./Builtin/package.dhall
+, Vars = ./Vars/package.dhall
 }

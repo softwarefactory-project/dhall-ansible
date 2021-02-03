@@ -12,7 +12,7 @@
 , roles = None (List Text)
 , serial = None (List Text)
 , strategy = None Text
-, vars = None (../Vars.dhall).Type
+, vars = None ../Vars/Type.dhall
 , vars_files = None (List Text)
 , vars_prompt = None (List Text)
 }

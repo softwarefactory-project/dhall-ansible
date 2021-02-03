@@ -1,5 +1,5 @@
 { hosts : Text
-, vars : Optional (../Vars.dhall).Type
+, vars : Optional ../Vars/Type.dhall
 , gather_facts : Optional Bool
 , gather_subset : Optional (List Text)
 , gather_timeout : Optional Natural
