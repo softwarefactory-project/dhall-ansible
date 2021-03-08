@@ -138,26 +138,38 @@ Here is a custom package including the ansible.posix and openstack.cloud collect
 
 ```dhall
 -- ./examples/ansible-extended.dhall
-let Base = ../package.dhall
+-- | The ansible schemas using the posix and podman collections
+let Base =
+      https://softwarefactory-project.io/cgit/software-factory/dhall-ansible/plain/package.dhall?h=0.2.1 sha256:030d7d1b16172afde44843c6e950fcc3382a6653269e36a27ca1d06d75a631ff
 
 let Posix =
       https://softwarefactory-project.io/cgit/software-factory/dhall-ansible-collection-ansible-posix/plain/package.dhall?h=0.1.0 sha256:c1b127b528be28294629ee1f8b0d8fc951c7282caaffab6ca675f931ea1450c7
 
-let Openstack =
-      https://softwarefactory-project.io/cgit/software-factory/dhall-ansible-collection-openstack-cloud/plain/package.dhall?h=0.1.0 sha256:ced909353da20eb8d8a088c59a91f822ed2e069923a7fd2e901b55398343f3fe
+let Podman =
+      https://softwarefactory-project.io/cgit/software-factory/dhall-ansible-collection-containers-podman/plain/package.dhall?h=0.1.0 sha256:469dcbf0d4466677c87b4734e8c405b50f5a336de688e30a75db7db126c20a81
 
 let BlockTask =
-      { Type = Base.Task.Type //\\ Posix.Task.Type //\\ Openstack.Task.Type
+      { Type =
+              Base.BaseTask.Type
+          //\\  Base.Builtin.Task.Type
+          //\\  Posix.Task.Type
+          //\\  Podman.Task.Type
       , default =
-          Base.Task.default // Posix.Task.default // Openstack.Task.default
+              Base.BaseTask.default
+          //  Base.Builtin.Task.default
+          //  Posix.Task.default
+          //  Podman.Task.default
       }
+
+let Export = Base // Posix // Podman
 
 let Task =
-      { Type = Task.Type //\\ Ansible.mkBlock Task.Type
-      , default = Task.default // Ansible.mkBlock Task.Type
+      { Type = BlockTask.Type //\\ (Base.mkBlock BlockTask.Type).Type
+      , default = BlockTask.default // (Base.mkBlock BlockTask.Type).default
       }
 
-let Play =
+let --| The new task type can be added to the Play too
+    Play =
       { Type =
               Base.BasePlay.Type
           //\\  { tasks : Optional (List Task.Type)
@@ -174,7 +186,7 @@ let Play =
               }
       }
 
-in  Base // { Task, Play, Posix }
+in  Export // { Task, Play }
 
 ```
 
