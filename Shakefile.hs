@@ -30,7 +30,8 @@ main = shakeMain $ do
   phony "builtin" builtinLinks
   "README.md" %> dhallReadmeAction
   "package.dhall" %> dhallTopLevelPackageAction "./Ansible/package.dhall"
-  "//package.dhall" %> \out -> unless ("../" `isPrefixOf` out) (dhallPackageAction out)
+  -- TODO: fix rules to avoid creating intermediate builtin file.
+  -- "//package.dhall" %> \out -> unless ("../" `isPrefixOf` out) (dhallPackageAction out)
   "Ansible/BaseTask/default.dhall" %> dhallDefaultAction
   "Ansible/BasePlay/default.dhall" %> dhallDefaultAction
   dhallDocsRules "dhall-ansible"
