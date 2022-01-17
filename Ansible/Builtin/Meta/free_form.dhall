@@ -6,4 +6,5 @@
 | noop
 | refresh_inventory
 | reset_connection
+| end_batch
 >

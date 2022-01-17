@@ -1,6 +1,7 @@
 { attributes = None Text
 , body = None Text
 , body_format = None ./body_format.dhall
+, ca_path = None Text
 , client_cert = None Text
 , client_key = None Text
 , creates = None Text
@@ -25,9 +26,11 @@
 , status_code = None (List Text)
 , timeout = None Natural
 , unix_socket = None Text
+, unredirected_headers = None (List Text)
 , unsafe_writes = None Bool
 , url_password = None Text
 , url_username = None Text
+, use_gssapi = None Bool
 , use_proxy = None Bool
 , validate_certs = None Bool
 }

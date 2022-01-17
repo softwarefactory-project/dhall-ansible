@@ -4,6 +4,7 @@
 , ctstate = None (List Text)
 , destination = None Text
 , destination_port = None Text
+, destination_ports = None (List Text)
 , dst_range = None Text
 , flush = None Bool
 , fragment = None Text
@@ -19,6 +20,8 @@
 , log_level = None ./log_level.dhall
 , log_prefix = None Text
 , match = None (List Text)
+, match_set = None Text
+, match_set_flags = None ./match_set_flags.dhall
 , out_interface = None Text
 , policy = None ./policy.dhall
 , protocol = None Text

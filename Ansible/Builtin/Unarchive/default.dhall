@@ -5,6 +5,8 @@
 , exclude = None (List Text)
 , extra_opts = None (List Text)
 , group = None Text
+, include = None (List Text)
+, io_buffer_size = None Natural
 , keep_newer = None Bool
 , list_files = None Bool
 , mode = None Text

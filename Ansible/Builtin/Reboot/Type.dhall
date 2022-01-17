@@ -3,6 +3,7 @@
 , msg : Optional Text
 , post_reboot_delay : Optional Natural
 , pre_reboot_delay : Optional Natural
+, reboot_command : Optional Text
 , reboot_timeout : Optional Natural
 , search_paths : Optional (List Text)
 , test_command : Optional Text

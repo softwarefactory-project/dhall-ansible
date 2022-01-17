@@ -61,6 +61,7 @@
 , unarchive = None ../Unarchive/Type.dhall
 , uri = None ../Uri/Type.dhall
 , user = None ../User/Type.dhall
+, validate_argument_spec = None ../ValidateArgumentSpec/Type.dhall
 , wait_for = None ../WaitFor/Type.dhall
 , wait_for_connection = None ../WaitForConnection/Type.dhall
 , yum = None ../Yum/Type.dhall

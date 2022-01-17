@@ -7,5 +7,4 @@
 , no_block : Optional Bool
 , scope : Optional ./scope.dhall
 , state : Optional ./state.dhall
-, user : Optional Bool
 }

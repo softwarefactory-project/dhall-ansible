@@ -4,6 +4,7 @@
 , ctstate : Optional (List Text)
 , destination : Optional Text
 , destination_port : Optional Text
+, destination_ports : Optional (List Text)
 , dst_range : Optional Text
 , flush : Optional Bool
 , fragment : Optional Text
@@ -19,6 +20,8 @@
 , log_level : Optional ./log_level.dhall
 , log_prefix : Optional Text
 , match : Optional (List Text)
+, match_set : Optional Text
+, match_set_flags : Optional ./match_set_flags.dhall
 , out_interface : Optional Text
 , policy : Optional ./policy.dhall
 , protocol : Optional Text

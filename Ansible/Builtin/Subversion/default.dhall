@@ -1,4 +1,5 @@
 { checkout = None Bool
+, dest = None Text
 , executable = None Text
 , export = None Bool
 , force = None Bool
@@ -8,4 +9,5 @@
 , switch = None Bool
 , update = None Bool
 , username = None Text
+, validate_certs = None Bool
 }

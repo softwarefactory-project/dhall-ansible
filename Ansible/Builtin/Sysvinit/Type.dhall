@@ -3,7 +3,7 @@
 , enabled : Optional Bool
 , name : Text
 , pattern : Optional Text
-, runlevels : Optional Text
-, sleep : Optional Text
+, runlevels : Optional (List Text)
+, sleep : Optional Natural
 , state : Optional ./state.dhall
 }

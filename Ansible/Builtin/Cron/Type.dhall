@@ -9,8 +9,7 @@
 , job : Optional Text
 , minute : Optional Text
 , month : Optional Text
-, name : Optional Text
-, reboot : Optional Bool
+, name : Text
 , special_time : Optional ./special_time.dhall
 , state : Optional ./state.dhall
 , user : Optional Text

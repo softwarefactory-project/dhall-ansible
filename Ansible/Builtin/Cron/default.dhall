@@ -9,8 +9,6 @@
 , job = None Text
 , minute = None Text
 , month = None Text
-, name = None Text
-, reboot = None Bool
 , special_time = None ./special_time.dhall
 , state = None ./state.dhall
 , user = None Text

@@ -1,5 +1,6 @@
 { codename = None Text
 , filename = None Text
+, install_python_apt = None Bool
 , mode = None Text
 , state = None ./state.dhall
 , update_cache = None Bool

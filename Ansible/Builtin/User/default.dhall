@@ -14,6 +14,8 @@
 , move_home = None Bool
 , non_unique = None Bool
 , password = None Text
+, password_expire_max = None Natural
+, password_expire_min = None Natural
 , password_lock = None Bool
 , profile = None Text
 , remove = None Bool
@@ -29,5 +31,6 @@
 , state = None ./state.dhall
 , system = None Bool
 , uid = None Natural
+, umask = None Text
 , update_password = None ./update_password.dhall
 }

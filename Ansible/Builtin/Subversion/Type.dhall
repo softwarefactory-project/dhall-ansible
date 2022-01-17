@@ -1,5 +1,5 @@
 { checkout : Optional Bool
-, dest : Text
+, dest : Optional Text
 , executable : Optional Text
 , export : Optional Bool
 , force : Optional Bool
@@ -10,4 +10,5 @@
 , switch : Optional Bool
 , update : Optional Bool
 , username : Optional Text
+, validate_certs : Optional Bool
 }

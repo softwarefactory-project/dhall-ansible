@@ -8,6 +8,7 @@
 , get_checksum = None Bool
 , hidden = None Bool
 , patterns = None (List Text)
+, read_whole_file = None Bool
 , recurse = None Bool
 , size = None Text
 , use_regex = None Bool
