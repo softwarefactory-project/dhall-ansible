@@ -1,9 +1,10 @@
 { accept_hostkey : Optional Bool
+, accept_newhostkey : Optional Bool
 , archive : Optional Text
 , archive_prefix : Optional Text
 , bare : Optional Bool
 , clone : Optional Bool
-, depth : Optional Text
+, depth : Optional Natural
 , dest : Text
 , executable : Optional Text
 , force : Optional Bool
@@ -15,6 +16,7 @@
 , remote : Optional Text
 , repo : Text
 , separate_git_dir : Optional Text
+, single_branch : Optional Bool
 , ssh_opts : Optional Text
 , track_submodules : Optional Bool
 , umask : Optional Text

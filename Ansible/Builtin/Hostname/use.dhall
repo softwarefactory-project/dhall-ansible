@@ -1,11 +1,14 @@
-< generic
+< alpine
 | debian
-| sles
-| redhat
-| alpine
-| systemd
-| openrc
-| openbsd
-| solaris
 | freebsd
+| generic
+| macos
+| macosx
+| darwin
+| openbsd
+| openrc
+| redhat
+| sles
+| solaris
+| systemd
 >

@@ -15,6 +15,8 @@
 , name : Text
 , non_unique : Optional Bool
 , password : Optional Text
+, password_expire_max : Optional Natural
+, password_expire_min : Optional Natural
 , password_lock : Optional Bool
 , profile : Optional Text
 , remove : Optional Bool
@@ -30,5 +32,6 @@
 , state : Optional ./state.dhall
 , system : Optional Bool
 , uid : Optional Natural
+, umask : Optional Text
 , update_password : Optional ./update_password.dhall
 }

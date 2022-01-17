@@ -63,6 +63,7 @@
 , Unarchive = ./Unarchive/package.dhall
 , Uri = ./Uri/package.dhall
 , User = ./User/package.dhall
+, ValidateArgumentSpec = ./ValidateArgumentSpec/package.dhall
 , WaitFor = ./WaitFor/package.dhall
 , WaitForConnection = ./WaitForConnection/package.dhall
 , Yum = ./Yum/package.dhall

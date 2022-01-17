@@ -2,6 +2,8 @@
 , backup = None Bool
 , block_end_string = None Text
 , block_start_string = None Text
+, comment_end_string = None Text
+, comment_start_string = None Text
 , follow = None Bool
 , force = None Bool
 , group = None Text

@@ -61,6 +61,7 @@
 , unarchive : Optional ../Unarchive/Type.dhall
 , uri : Optional ../Uri/Type.dhall
 , user : Optional ../User/Type.dhall
+, validate_argument_spec : Optional ../ValidateArgumentSpec/Type.dhall
 , wait_for : Optional ../WaitFor/Type.dhall
 , wait_for_connection : Optional ../WaitForConnection/Type.dhall
 , yum : Optional ../Yum/Type.dhall

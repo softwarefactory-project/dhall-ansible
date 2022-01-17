@@ -4,6 +4,7 @@
 , handlers_from : Optional Text
 , name : Text
 , public : Optional Bool
+, rolespec_validate : Optional Bool
 , tasks_from : Optional Text
 , vars_from : Optional Text
 }

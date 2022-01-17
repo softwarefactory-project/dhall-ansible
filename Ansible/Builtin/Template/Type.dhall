@@ -2,6 +2,8 @@
 , backup : Optional Bool
 , block_end_string : Optional Text
 , block_start_string : Optional Text
+, comment_end_string : Optional Text
+, comment_start_string : Optional Text
 , dest : Text
 , follow : Optional Bool
 , force : Optional Bool

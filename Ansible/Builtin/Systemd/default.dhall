@@ -7,5 +7,4 @@
 , no_block = None Bool
 , scope = None ./scope.dhall
 , state = None ./state.dhall
-, user = None Bool
 }

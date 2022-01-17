@@ -17,9 +17,11 @@
 , sha256sum = None Text
 , timeout = None Natural
 , tmp_dest = None Text
+, unredirected_headers = None (List Text)
 , unsafe_writes = None Bool
 , url_password = None Text
 , url_username = None Text
+, use_gssapi = None Bool
 , use_proxy = None Bool
 , validate_certs = None Bool
 }

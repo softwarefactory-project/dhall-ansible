@@ -12,6 +12,7 @@
 , owner : Optional Text
 , path : Text
 , regexp : Optional Text
+, search_string : Optional Text
 , selevel : Optional Text
 , serole : Optional Text
 , setype : Optional Text

@@ -9,6 +9,7 @@
 , hidden : Optional Bool
 , paths : List Text
 , patterns : Optional (List Text)
+, read_whole_file : Optional Bool
 , recurse : Optional Bool
 , size : Optional Text
 , use_regex : Optional Bool

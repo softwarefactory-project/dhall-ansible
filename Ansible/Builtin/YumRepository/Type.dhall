@@ -1,23 +1,23 @@
 { async : Optional Bool
 , attributes : Optional Text
 , bandwidth : Optional Text
-, baseurl : Optional Text
+, baseurl : Optional (List Text)
 , cost : Optional Text
 , deltarpm_metadata_percentage : Optional Text
 , deltarpm_percentage : Optional Text
 , description : Optional Text
 , enabled : Optional Bool
 , enablegroups : Optional Bool
-, exclude : Optional Text
+, exclude : Optional (List Text)
 , failovermethod : Optional ./failovermethod.dhall
 , file : Optional Text
 , gpgcakey : Optional Text
 , gpgcheck : Optional Bool
-, gpgkey : Optional Text
+, gpgkey : Optional (List Text)
 , group : Optional Text
 , http_caching : Optional ./http_caching.dhall
 , include : Optional Text
-, includepkgs : Optional Text
+, includepkgs : Optional (List Text)
 , ip_resolve : Optional ./ip_resolve.dhall
 , keepalive : Optional Bool
 , keepcache : Optional ./keepcache.dhall
@@ -27,6 +27,7 @@
 , mirrorlist : Optional Text
 , mirrorlist_expire : Optional Text
 , mode : Optional Text
+, module_hotfixes : Optional Bool
 , name : Text
 , owner : Optional Text
 , password : Optional Text

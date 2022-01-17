@@ -1,5 +1,6 @@
 { codename : Optional Text
 , filename : Optional Text
+, install_python_apt : Optional Bool
 , mode : Optional Text
 , repo : Text
 , state : Optional ./state.dhall

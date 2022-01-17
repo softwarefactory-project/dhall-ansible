@@ -1,9 +1,10 @@
 { accept_hostkey = None Bool
+, accept_newhostkey = None Bool
 , archive = None Text
 , archive_prefix = None Text
 , bare = None Bool
 , clone = None Bool
-, depth = None Text
+, depth = None Natural
 , executable = None Text
 , force = None Bool
 , gpg_whitelist = None (List Text)
@@ -13,6 +14,7 @@
 , refspec = None Text
 , remote = None Text
 , separate_git_dir = None Text
+, single_branch = None Bool
 , ssh_opts = None Text
 , track_submodules = None Bool
 , umask = None Text

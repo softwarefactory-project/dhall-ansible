@@ -6,6 +6,8 @@
 , exclude : Optional (List Text)
 , extra_opts : Optional (List Text)
 , group : Optional Text
+, include : Optional (List Text)
+, io_buffer_size : Optional Natural
 , keep_newer : Optional Bool
 , list_files : Optional Bool
 , mode : Optional Text

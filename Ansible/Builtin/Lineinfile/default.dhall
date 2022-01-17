@@ -11,6 +11,7 @@
 , others = None Text
 , owner = None Text
 , regexp = None Text
+, search_string = None Text
 , selevel = None Text
 , serole = None Text
 , setype = None Text

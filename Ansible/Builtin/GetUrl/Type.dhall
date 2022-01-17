@@ -18,10 +18,12 @@
 , sha256sum : Optional Text
 , timeout : Optional Natural
 , tmp_dest : Optional Text
+, unredirected_headers : Optional (List Text)
 , unsafe_writes : Optional Bool
 , url : Text
 , url_password : Optional Text
 , url_username : Optional Text
+, use_gssapi : Optional Bool
 , use_proxy : Optional Bool
 , validate_certs : Optional Bool
 }
