@@ -9,11 +9,6 @@ import Development.Shake
 import ShakeFactory
 import ShakeFactory.Dhall
 
-builtinLinks :: Action ()
-builtinLinks = do
-  builtins <- filter (/= "Task") <$> getDirectoryDirs "Ansible/Builtin"
-  mapM_ (\fp -> writeFile' ("Ansible/" <> fp <> ".dhall") ("./Builtin/" <> fp <> "/package.dhall")) builtins
-
 test :: Rules ()
 test = phony "test" $ do
   testCases <- getDirectoryFiles "tests" ["*"]
@@ -26,8 +21,7 @@ test = phony "test" $ do
 
 main :: IO ()
 main = shakeMain $ do
-  want ["README.md", "test", "package.dhall", "Ansible/BaseTask/default.dhall", "Ansible/BasePlay/default.dhall", "builtin"]
-  phony "builtin" builtinLinks
+  want ["README.md", "test", "package.dhall", "Ansible/BaseTask/default.dhall", "Ansible/BasePlay/default.dhall"]
   "README.md" %> dhallReadmeAction
   "package.dhall" %> dhallTopLevelPackageAction "./Ansible/package.dhall"
   -- TODO: fix rules to avoid creating intermediate builtin file.

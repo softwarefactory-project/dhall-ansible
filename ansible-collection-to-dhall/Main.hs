@@ -1,7 +1,3 @@
-#!/usr/bin/env nix-shell
-#! nix-shell -I nixpkgs=https://github.com/NixOS/nixpkgs/archive/d4f19a218cbb15a242864a49f8b9f16fb7d48ec8.tar.gz
-#! nix-shell --pure -i runghc -p  -p "haskellPackages.ghcWithPackages (p: [ p.aeson p.dhall p.relude p.casing p.directory p.filepath p.typed-process p.optparse-generic ])"
-
 {-# LANGUAGE DataKinds #-}
 {-# LANGUAGE DeriveGeneric #-}
 {-# LANGUAGE FlexibleInstances #-}
