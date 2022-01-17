@@ -14,6 +14,12 @@ $ ./venv/bin/pip install ansible
 Run the tool:
 
 ```shell
-$ ./Main.hs --help
-$ ./Main.hs --ansible_doc ./venv/bin/ansible-doc --collection openstack.cloud --output openstack-collection/
+$ cabal run ansible-collection-to-dhall -- --ansible_doc ./venv/bin/ansible-doc --collection openstack.cloud --output openstack-collection/
+```
+
+Update builtins:
+
+```shell
+$ cabal run ansible-collection-to-dhall -- --ansible_doc ./venv/bin/ansible-doc --builtin --output ../Ansible/
+$ cd ..; shake
 ```
