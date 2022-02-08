@@ -29,6 +29,7 @@ in  [ Ansible.Play::{
               }
             ]
           }
+        , Ansible.Task::{ import_tasks = Some "test.yaml" }
         ]
       }
     ]

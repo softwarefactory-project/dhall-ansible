@@ -44,6 +44,7 @@ in  [ Ansible.Play::{
               }
             ]
           }
+        , Ansible.Task::{ import_tasks = Some "test.yaml" }
         ]
       }
     ]
@@ -70,6 +71,7 @@ in  [ Ansible.Play::{
         - debug:
             msg: rescued
           name: Rescue task
+    - import_tasks: test.yaml
   vars:
     var_name: var_value
 
