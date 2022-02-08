@@ -1,1 +1,1 @@
-{ free-form : Optional Text }
+Text
