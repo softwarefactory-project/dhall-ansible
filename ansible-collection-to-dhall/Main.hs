@@ -176,9 +176,12 @@ instance FromJSON ModuleOptions where
 
 -- | Convert a module options to a Dhall record type
 dhallType :: ModuleOptions -> D.Expr Void D.Import
-dhallType (ModuleOptions xs) = D.Record $ fmap D.makeRecordField $ mkMap $ L.foldl go [] xs
+dhallType (ModuleOptions xs) = case xs of
+  [ModuleOption "free-form" _ _ _] -> D.Text
+  _ -> D.Record $ fmap D.makeRecordField $ mkMap $ L.foldl go [] xs
   where
     go :: [(Text, D.Expr Void D.Import)] -> ModuleOption -> [(Text, D.Expr Void D.Import)]
+    go _ (ModuleOption "free-form" _ _ _) = []
     go acc (ModuleOption name required _desc optionType') =
       let dhallType' = case optionType' of
             OBool -> D.Bool
@@ -206,6 +209,7 @@ mkMap = D.fromList . L.sortOn fst
 
 -- | Create a Dhall schema from a module record type
 dhallModulePackage :: D.Expr Void D.Import -> [(FilePath, D.Expr Void D.Import)]
+dhallModulePackage D.Text = [("Type.dhall", D.Text)]
 dhallModulePackage (D.Record kvm) =
   [ ("Type.dhall", D.Record . mkMap $ type_),
     ("default.dhall", D.RecordLit . mkMap $ default_)

@@ -1,1 +1,1 @@
-{ apply = None Text, file = None Text, free-form = None Text }
+{ apply = None Text, file = None Text }
