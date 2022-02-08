@@ -196,6 +196,12 @@ in  Export // { Task, Play }
 
 Frozen packages are available in the tag commit.
 
+### 0.3.0
+
+- Add missing add_host attributes.
+- Remove free-form attributes from include/import tasks.
+- Update builtins attributes to the latest version.
+
 ### 0.2.2
 
 - Fix import issue for case insensitive filesystem.
